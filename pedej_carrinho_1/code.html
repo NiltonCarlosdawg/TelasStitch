@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meu Carrinho - PedeJá</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-fixed-variant": "#812900",
+                "surface-container-highest": "#e2e2e2",
+                "on-primary": "#ffffff",
+                "surface-container": "#eeeeee",
+                "surface-variant": "#e2e2e2",
+                "outline": "#8f7066",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#5c5c5c",
+                "secondary-fixed-dim": "#ffb94d",
+                "surface-bright": "#f9f9f9",
+                "outline-variant": "#e4beb2",
+                "on-secondary-fixed": "#291800",
+                "primary-fixed": "#ffdbcf",
+                "surface-dim": "#dadada",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "surface-container-low": "#f3f3f3",
+                "on-tertiary-container": "#fffcfb",
+                "tertiary-fixed": "#e4e2e1",
+                "surface-tint": "#a93800",
+                "primary": "#a53700",
+                "on-secondary": "#ffffff",
+                "on-primary-container": "#fffbff",
+                "inverse-primary": "#ffb59b",
+                "secondary-container": "#feae20",
+                "surface": "#f9f9f9",
+                "on-tertiary-fixed-variant": "#474746",
+                "on-error": "#ffffff",
+                "on-surface": "#1a1c1c",
+                "primary-fixed-dim": "#ffb59b",
+                "on-secondary-fixed-variant": "#624000",
+                "tertiary-container": "#757474",
+                "on-tertiary-fixed": "#1b1c1c",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#e8e8e8",
+                "on-error-container": "#93000a",
+                "inverse-on-surface": "#f1f1f1",
+                "on-primary-fixed": "#380d00",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#6a4500",
+                "on-surface-variant": "#5b4137",
+                "on-background": "#1a1c1c",
+                "secondary": "#815500",
+                "inverse-surface": "#2f3131",
+                "background": "#f9f9f9",
+                "secondary-fixed": "#ffddb2",
+                "primary-container": "#ce4600"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "space-xl": "32px",
+                "gutter": "16px",
+                "space-lg": "24px",
+                "container-margin": "20px",
+                "space-md": "16px",
+                "space-xs": "4px",
+                "space-sm": "8px"
+        },
+        "fontFamily": {
+                "label-lg": [
+                        "Inter"
+                ],
+                "button": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "button": [
+                        "16px",
+                        {
+                                "lineHeight": "1",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md font-['Inter'] antialiased min-h-screen flex flex-col">
+<!-- TopAppBar from JSON -->
+<header class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 docked full-width top-0 sticky z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm flex justify-between items-center h-14 px-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#F95A0D] dark:text-[#F95A0D]">location_on</span>
+<span class="font-['Inter'] text-lg font-bold tracking-tight text-slate-900 dark:text-slate-50 text-2xl font-black tracking-tighter text-[#F95A0D] dark:text-[#F95A0D]">DelivEat</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant">
+<img alt="User avatar profile" class="w-full h-full object-cover" data-alt="A brightly lit, professional headshot of a smiling young man. The lighting is soft and even, highlighting his features against a clean, light-colored background. This image serves as a standard user profile avatar, fitting seamlessly into a modern, light-mode application UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKMyTd7GJGsPtWD-B3ZGjEjix49uQWUd2yLsOtE5mGBEofdpvmsBkvjWjrJC4XFcBEVsc0eR4wT1h6c94fxTh6jh6n4hYeHQnOlz8i0pWL9T7D6oUqr98dBxKcpJPIE0wcsghydSfhuG82a6oh_XaA96B4UX3kh2XU1rYJ2OqiUPtcSRQL-nv3d7YlYcvwby5A3Q88PVCGORU2YUT6z8BVroKta-HXDtx2QvjQySMjQ7OWon_IYhe-DA_zl3fF3TplHrIvKZi78Rk"/>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto px-gutter pt-space-lg pb-[100px] flex flex-col gap-space-lg">
+<!-- Page Header -->
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-background">Meu Carrinho</h1>
+</div>
+<!-- Delivery Address Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-start gap-space-md border border-surface-variant">
+<div class="p-space-sm bg-primary-fixed rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">pin_drop</span>
+</div>
+<div class="flex-1 flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-tertiary">ENTREGAR EM</span>
+<p class="font-body-md text-body-md font-semibold text-on-background leading-tight">Rua das Flores, 123 - Apto 45</p>
+<p class="font-body-md text-sm text-tertiary">Centro, São Paulo - SP</p>
+</div>
+<button class="font-body-md text-sm font-semibold text-primary hover:underline">Trocar</button>
+</section>
+<!-- Items List -->
+<section class="flex flex-col gap-space-md">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-md flex gap-space-md items-center border border-surface-variant">
+<div class="w-20 h-20 shrink-0 rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Smash Burger Duplo" class="w-full h-full object-cover" data-alt="A highly appetizing, close-up shot of a gourmet double cheeseburger. The burger features a perfectly toasted brioche bun, juicy beef patties, melted cheddar cheese, crisp lettuce, and fresh tomato slices. It is presented on a clean, light-mode background that emphasizes the vibrant colors of the ingredients. The lighting is soft and natural, creating a mouth-watering and professional food photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGwhBQ1m8wkwhNf-WLARXvsSd-JDiQW0Njc2ajTfEmDDEqd5Uxr0ALcEwlTLBeFNcRDr7qCRTqrlJK_ns_EmzgDAUq0WIE4NeCnp1_LjShogMfK7S9yT4xZAip6Vi2xIUfbXaOwe6RWjsgt1cjcXnm7XiLv9AfcoCwsgu-EyWQ6A7r554Eg8sx1v3XmTY08V-_n7y0J13pt5HOSVFWt6EJZPUna_kqs2DYrUaT_zv-35-5C9cFxYui9_KGNdk6UuSv2LHAkLkgfSA"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-space-xs">
+<div>
+<h3 class="font-body-md text-body-md font-semibold text-[#292929] line-clamp-2 leading-tight">Smash Burger Duplo com Bacon</h3>
+</div>
+<div class="flex items-end justify-between mt-auto pt-space-sm">
+<span class="font-headline-md text-[20px] font-bold text-secondary">R$ 38,90</span>
+<!-- Quantity Control -->
+<div class="flex items-center bg-surface-container rounded-full border border-surface-variant">
+<button class="w-8 h-8 flex items-center justify-center text-primary rounded-l-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-body-md text-sm font-semibold w-6 text-center text-on-background">2</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary rounded-r-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-md flex gap-space-md items-center border border-surface-variant">
+<div class="w-20 h-20 shrink-0 rounded-lg overflow-hidden bg-surface-variant">
+<img alt="Batata Frita Grande" class="w-full h-full object-cover" data-alt="A professional food photography shot of a generous portion of golden, crispy French fries. The fries are perfectly cooked and lightly salted, served in a clean, modern setting. The background is a bright, minimalist setting that aligns with a clean UI aesthetic. Soft, directional lighting highlights the texture and golden color of the fries, making them look highly appetizing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnKC0scWnssAzcPRxwfIWsyOEfGdexyLnyhMPastPRYldLwCXf5R9hYmEmvdG68BtJtz1tNOtv3YFadlPXPGoaOzpUx5QH1gXdDt8ENJ6TSh_6-aXlDP6bqaWGUF1ZJzed9dveSMUFQVQhC_yv40ilT5kDYZDYHjRBgo4vsa65q1hu7I9Vgl98iDy2T7wgUV7HYRiwvvVcwagdSag7LlZ-uHQJbQP2Szzj3dAHlj7TrwxSP_D7Ig0h3oHOD_Mu4oNO5lRxism_ACk"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full py-space-xs">
+<div>
+<h3 class="font-body-md text-body-md font-semibold text-[#292929] line-clamp-2 leading-tight">Batata Frita Grande Rústica</h3>
+</div>
+<div class="flex items-end justify-between mt-auto pt-space-sm">
+<span class="font-headline-md text-[20px] font-bold text-secondary">R$ 15,50</span>
+<!-- Quantity Control -->
+<div class="flex items-center bg-surface-container rounded-full border border-surface-variant">
+<button class="w-8 h-8 flex items-center justify-center text-primary rounded-l-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-body-md text-sm font-semibold w-6 text-center text-on-background">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary rounded-r-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Add More Items CTA -->
+<button class="flex items-center justify-center gap-space-xs py-space-sm text-primary font-body-md text-sm font-semibold hover:bg-primary-fixed rounded-lg transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+                Adicionar mais itens
+            </button>
+</section>
+<!-- Order Summary -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm border border-surface-variant">
+<h3 class="font-headline-md text-[20px] font-semibold text-on-background mb-space-xs">Resumo do Pedido</h3>
+<div class="flex justify-between items-center font-body-md text-body-md text-tertiary">
+<span>Subtotal</span>
+<span>R$ 93,30</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-tertiary">
+<span>Taxa de Entrega</span>
+<span class="text-secondary">Grátis</span>
+</div>
+<hr class="border-surface-variant my-space-xs"/>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-[24px] font-bold text-on-background">Total</span>
+<span class="font-headline-md font-bold text-[#FBAC1D] text-[24px]">R$ 93,30</span>
+</div>
+</section>
+<!-- Main CTA Action -->
+<button class="w-full bg-[#F95A0D] text-white font-button text-button py-space-md rounded-full text-center shadow-md active:scale-[0.98] transition-transform">
+            Finalizar Pedido
+        </button>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="bg-white dark:bg-slate-900 docked full-width bottom-0 z-50 border-t border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full h-16 flex justify-around items-center px-2 pb-safe md:hidden">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-medium mt-1">Home</span>
+</a>
+<!-- Search (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-full" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Inter'] text-[11px] font-medium mt-1">Search</span>
+</a>
+<!-- Orders (Active - Map to user intent 'Pedidos') -->
+<a class="flex flex-col items-center justify-center text-[#F95A0D] dark:text-[#F95A0D] font-semibold hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-['Inter'] text-[11px] font-medium mt-1">Orders</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-full" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

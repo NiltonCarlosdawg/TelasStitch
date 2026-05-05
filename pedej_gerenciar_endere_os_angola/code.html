@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="pt-AO"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Delivery Address - Luanda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-error": "#ffffff",
+                "secondary": "#815500",
+                "on-primary-fixed-variant": "#812900",
+                "secondary-fixed-dim": "#ffb94d",
+                "surface": "#f9f9f9",
+                "on-surface-variant": "#5b4137",
+                "secondary-container": "#feae20",
+                "primary-container": "#ce4600",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "surface-container": "#eeeeee",
+                "on-primary-fixed": "#380d00",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "tertiary": "#5c5c5c",
+                "surface-dim": "#dadada",
+                "secondary-fixed": "#ffddb2",
+                "on-background": "#1a1c1c",
+                "primary-fixed-dim": "#ffb59b",
+                "tertiary-fixed": "#e4e2e1",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#fffbff",
+                "primary-fixed": "#ffdbcf",
+                "surface-tint": "#a93800",
+                "tertiary-container": "#757474",
+                "outline-variant": "#e4beb2",
+                "on-tertiary-fixed": "#1b1c1c",
+                "on-secondary-fixed-variant": "#624000",
+                "on-surface": "#1a1c1c",
+                "surface-container-highest": "#e2e2e2",
+                "primary": "#a53700",
+                "surface-container-low": "#f3f3f3",
+                "on-secondary-container": "#6a4500",
+                "surface-bright": "#f9f9f9",
+                "error": "#ba1a1a",
+                "on-tertiary-fixed-variant": "#474746",
+                "outline": "#8f7066",
+                "on-primary": "#ffffff",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#ffb59b",
+                "on-tertiary-container": "#fffcfb",
+                "inverse-on-surface": "#f1f1f1",
+                "surface-container-high": "#e8e8e8",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed": "#291800",
+                "inverse-surface": "#2f3131",
+                "surface-variant": "#e2e2e2",
+                "background": "#f9f9f9"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "space-lg": "24px",
+                "space-xl": "32px",
+                "space-xs": "4px",
+                "gutter": "16px",
+                "space-sm": "8px",
+                "space-md": "16px",
+                "container-margin": "20px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Inter"
+                ],
+                "label-lg": [
+                        "Inter"
+                ],
+                "button": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "button": [
+                        "16px",
+                        {
+                                "lineHeight": "1",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body { background-color: theme('colors.background'); }
+</style>
+</head>
+<body class="font-body-md text-on-background min-h-screen flex flex-col pb-[80px]">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-zinc-900 docked full-width top-0 z-50 shadow-sm sticky">
+<div class="flex items-center justify-between px-4 h-16 w-full max-w-screen-xl mx-auto border-b border-zinc-100 dark:border-zinc-800">
+<button class="text-zinc-900 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors p-2 rounded-full flex items-center justify-center active:scale-95 duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="text-orange-600 dark:text-orange-500 font-inter text-lg font-bold text-center flex-1">Delivery Address</h1>
+<div class="w-10"></div> <!-- Placeholder for balance -->
+</div>
+</header>
+<main class="flex-1 flex flex-col max-w-screen-md mx-auto w-full relative">
+<!-- Map View Area -->
+<section class="relative w-full h-[300px] bg-surface-container-low shrink-0 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A highly detailed overhead map view showing the urban layout of Luanda, Angola. The map displays streets, city blocks, and subtle topographical features in a modern, clean cartographic style suitable for a modern delivery app interface. The color palette is light and bright, featuring soft whites, very light greys, and subtle warm tones that align with a high-energy brand identity. The lighting implies a clear daytime view. The aesthetic is crisp, professional, and optimized for an appetizing, high-contrast user interface context." style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ');"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"></div>
+<!-- Center Pin -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-primary-container text-white p-2 rounded-full shadow-lg flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="w-2 h-1 bg-black/20 rounded-[100%] mt-1 shadow-sm"></div>
+</div>
+<!-- GPS Button -->
+<button class="absolute bottom-4 right-4 bg-white text-on-surface p-3 rounded-full shadow-md hover:bg-surface-container-low transition-colors flex items-center justify-center z-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</button>
+</section>
+<!-- Content Area -->
+<div class="flex-1 bg-white -mt-4 rounded-t-xl relative z-20 px-container-margin pt-space-lg pb-32 flex flex-col gap-space-lg shadow-[0_-4px_12px_rgba(41,41,41,0.04)]">
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-tertiary">search</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border border-surface-dim rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-tertiary" placeholder="Procurar novo endereço em Luanda..." type="text"/>
+</div>
+<!-- Saved Addresses -->
+<section class="flex flex-col gap-space-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">Meus Endereços</h2>
+<div class="flex flex-col gap-space-sm">
+<!-- Address Card: Casa -->
+<button class="flex items-center gap-space-md p-space-md bg-surface-bright rounded-lg border border-surface-container shadow-sm hover:border-primary/30 transition-colors text-left w-full focus:ring-2 focus:ring-primary focus:outline-none">
+<div class="bg-surface-container-low p-2 rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-label-lg font-label-lg text-on-surface truncate">Casa</p>
+<p class="text-body-md font-body-md text-on-surface-variant truncate text-sm mt-0.5">Rua da Missão, Apt 42 - Mutamba</p>
+</div>
+<span class="material-symbols-outlined text-tertiary shrink-0">more_vert</span>
+</button>
+<!-- Address Card: Trabalho -->
+<button class="flex items-center gap-space-md p-space-md bg-surface-bright rounded-lg border border-surface-container shadow-sm hover:border-primary/30 transition-colors text-left w-full focus:ring-2 focus:ring-primary focus:outline-none">
+<div class="bg-surface-container-low p-2 rounded-full flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-label-lg font-label-lg text-on-surface truncate">Trabalho</p>
+<p class="text-body-md font-body-md text-on-surface-variant truncate text-sm mt-0.5">Torre Ambiente, 5º Andar - Talatona</p>
+</div>
+<span class="material-symbols-outlined text-tertiary shrink-0">more_vert</span>
+</button>
+<!-- Address Card: Outros -->
+<button class="flex items-center gap-space-md p-space-md bg-surface-bright rounded-lg border border-surface-container shadow-sm hover:border-primary/30 transition-colors text-left w-full focus:ring-2 focus:ring-primary focus:outline-none">
+<div class="bg-surface-container-low p-2 rounded-full flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-label-lg font-label-lg text-on-surface truncate">Ginásio</p>
+<p class="text-body-md font-body-md text-on-surface-variant truncate text-sm mt-0.5">Avenida Comandante Gika - Maianga</p>
+</div>
+<span class="material-symbols-outlined text-tertiary shrink-0">more_vert</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Sticky CTA Bottom -->
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-surface-container-highest p-4 z-40 pb-safe pb-8 shadow-[0_-8px_20px_rgba(41,41,41,0.05)] md:pb-4 max-w-screen-md md:left-1/2 md:-translate-x-1/2">
+<button class="w-full bg-primary-container text-on-primary font-button text-button py-4 rounded-full shadow-md hover:bg-primary transition-colors flex items-center justify-center focus:ring-4 focus:ring-primary/20 focus:outline-none active:scale-95 duration-150">
+            Confirmar Endereço
+        </button>
+</div>
+</main>
+</body></html>

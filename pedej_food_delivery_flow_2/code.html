@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PedeJá - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-background": "#f9dcd3",
+                "on-primary": "#5b1a00",
+                "primary": "#ffb59b",
+                "background": "#1e100b",
+                "surface-container-highest": "#42312b",
+                "outline": "#aa897e",
+                "on-secondary-fixed": "#291800",
+                "on-primary-fixed-variant": "#812900",
+                "primary-fixed-dim": "#ffb59b",
+                "inverse-surface": "#f9dcd3",
+                "primary-container": "#fb5b0f",
+                "inverse-on-surface": "#3e2c26",
+                "tertiary-fixed-dim": "#9dcaff",
+                "tertiary-fixed": "#d1e4ff",
+                "surface-variant": "#42312b",
+                "surface-dim": "#1e100b",
+                "surface-container-high": "#372620",
+                "secondary-container": "#e79c00",
+                "on-error": "#690005",
+                "on-tertiary-fixed-variant": "#00497c",
+                "surface-container-lowest": "#180b06",
+                "surface-tint": "#ffb59b",
+                "on-tertiary-fixed": "#001d35",
+                "tertiary-container": "#0795f3",
+                "secondary": "#ffb94d",
+                "surface-container-low": "#271813",
+                "surface-container": "#2b1c16",
+                "surface": "#1e100b",
+                "secondary-fixed-dim": "#ffb94d",
+                "on-tertiary-container": "#002b4c",
+                "primary-fixed": "#ffdbcf",
+                "error-container": "#93000a",
+                "secondary-fixed": "#ffddb2",
+                "on-surface-variant": "#e4beb2",
+                "outline-variant": "#5b4137",
+                "on-tertiary": "#003257",
+                "on-secondary": "#452b00",
+                "on-primary-container": "#501600",
+                "surface-bright": "#47352f",
+                "inverse-primary": "#a93800",
+                "error": "#ffb4ab",
+                "on-surface": "#f9dcd3",
+                "tertiary": "#9dcaff",
+                "on-primary-fixed": "#380d00",
+                "on-secondary-container": "#583900",
+                "on-error-container": "#ffdad6",
+                "on-secondary-fixed-variant": "#624000"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "xl": "32px",
+                "margin": "20px",
+                "sm": "12px",
+                "base": "8px",
+                "xs": "4px",
+                "lg": "24px",
+                "gutter": "16px",
+                "md": "16px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Be Vietnam Pro"
+                ],
+                "display-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "body-md": [
+                        "Be Vietnam Pro"
+                ],
+                "headline-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "title-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "body-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "label-lg": [
+                        "Be Vietnam Pro"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "title-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-lg": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 16px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased bg-background text-on-background max-w-md mx-auto relative min-h-[884px]" data-mode="connect" data-stitch-vh="min-h-[884px]===min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface/90 backdrop-blur-md text-primary font-body-lg tracking-tight docked full-width top-0 sticky z-50 border-b border-outline-variant shadow-sm flex justify-between items-center h-14 px-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface" data-icon="location_on">location_on</span>
+<span class="font-headline-md text-title-lg text-on-surface truncate max-w-[200px]">Mutamba, Luanda</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="A close up portrait of a young man smiling softly. The lighting is bright and even, highlighting his features. He is wearing a simple casual shirt. The background is a slightly blurred, light neutral tone, keeping the focus entirely on his face. The overall mood is friendly and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxx5lddPPhUaQEfoa7x2k4rkdh1BaFXvDHRMlqcfjBXdXi95xYo1nua0CW9dpg0hfSxONIq3HjzM3A96CYw-v81g7sNQtrjuf-DcogzPSucs1WWAlJjVnBYa1TIRDOIzrxy7dzx7Osjl42FQZvspmcdJRunSHdrMAo8HAwJ2t9VIIpifQ_nSkPiSJw2hNC2rUGi2KwaedIaj6oG63l4LPZksOpqupqFgUNcpHMG_I_tgqXFggI67M8xxta1Wzt2zrKs9k56ZGPN9U"/>
+</div>
+</header>
+<main class="pb-24 pt-4 px-gutter flex flex-col gap-lg">
+<!-- Search Bar -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-highest rounded-xl pl-10 pr-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant border-2 border-transparent focus:border-primary focus:ring-0 transition-colors outline-none" placeholder="Pratos, restaurantes ou tipos..." type="text"/>
+</div>
+<!-- Categories (Bento/Horizontal Scroll) -->
+<section>
+<div class="flex overflow-x-auto hide-scrollbar gap-sm pb-2 -mx-gutter px-gutter">
+<div class="flex-shrink-0 flex flex-col items-center gap-xs w-[72px]">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden relative shadow-sm">
+<img alt="Pizza" class="w-full h-full object-cover opacity-80" data-alt="A delicious looking pizza with melted cheese and fresh toppings. The crust is golden brown and perfectly baked. It sits on a rustic wooden board, illuminated by warm, inviting lighting. The image feels appetizing and high quality, perfect for a food delivery app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1WpAjy9TtH5x_knq1rnjvgMedreGbrx0Xvllk7XooGI3k8r8CvEhQuZnHQh58ABcYjMJyCsWuY4W0tlGLN8uMcC3_dX7GysYLwBhpEu9nGW1lY4cjQgGucfCAw4bKJKjjoi389Dg_z3bLoxwQwamfuUKb7sveMlBGyPCj1kAZu0aljOqF0a5b6wvAUB4glgzbyJqKOidIjgY_J0GY6eGQNlB7QaTwIuddwIGcwF1wj-4fpgfGkn5XXi0h7CKEkPJVhsuPi9y1i0o"/>
+<span class="absolute font-label-lg text-label-lg text-white bg-black/40 w-full text-center bottom-0 py-1">PIZZA</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs w-[72px]">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden relative shadow-sm">
+<img alt="Burger" class="w-full h-full object-cover opacity-80" data-alt="A classic, juicy cheeseburger with fresh lettuce, tomato, and a perfectly toasted bun. The burger is the main focus, set against a clean, light background. The lighting emphasizes the textures of the ingredients, making it look incredibly tasty and appealing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8wmZAR1KWW451SmEgG7iCYtyfys2spXKMbVZxPx1gBbO6cLyYVAhhF_mkOIS10hNelSk9CNg7_OXHUNKzLwYn3s0fk3d70qTsD_9m1mRASUon6fXm7hMXE1G4AnHXS1DC-Fx-yW6CLuAkfi-QT1HSiv4ssP8qkwxnZcjaDa4zPNVnb01zhxZbz5C_vBJTviIkeqp8lt79zgGuaAbTUz9KWYtM_6583H7XIl13ZXVAz4zYYSQOwGRiN4a2DbvzPD_DJyTncBRdbfg"/>
+<span class="absolute font-label-lg text-label-lg text-white bg-black/40 w-full text-center bottom-0 py-1">BURGER</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs w-[72px]">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden relative shadow-sm">
+<img alt="Brazilian" class="w-full h-full object-cover opacity-80" data-alt="A vibrant plate of traditional Brazilian food, featuring rice, beans, farofa, and grilled meat. The colors are rich and warm, highlighting the diverse components of the dish. The setting is a simple, modern table, focusing attention on the hearty, comforting meal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOnvt_ZXnenHJRKcjYFWnX1v3NK-9YtQ6eHNigqh7A6V_txLUn9a13WyuldTjm91ij2kQrC9oBz9_1dXdwhv9-3mCbhTHzJlvFrI7gOO6JUQ_vAE8ceDafkRFjEKMbhi7CpuPUa6_bgJYfuuI35SD0UpPKwILhEWwdm5VZ8wkqeNTf2NSsq8j4Xt9KaiCNPuuFUfk2qO0azSDAEAj3cQv_YCXvmI8khibBoVVg1krJ6xAxFSGHcYdOfX5yOBsuTtkDNdfGr1e9Gmw"/>
+<span class="absolute font-label-lg text-label-lg text-white bg-black/40 w-full text-center bottom-0 py-1">BRASIL</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs w-[72px]">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden relative shadow-sm">
+<img alt="Japanese" class="w-full h-full object-cover opacity-80" data-alt="An elegant arrangement of fresh sushi rolls and sashimi on a dark, sleek plate. The colors of the raw fish are bright and fresh, contrasting beautifully with the dark background. The lighting is precise, giving the food a premium, high-end appearance suitable for a top-tier restaurant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKhI68vLDC2FwVkj0uUttKnSsWXn0mH1ObsM_4-piCFofUqbyHz9HZOeXYfNGXp103j7o4UHQ1_KRh9lKri9Oe5SuAitMMnhVYtTEi1AszqINBkjs_Y3jdtHxqQE_BgnXqgS-yeiF2ai0D2NHxUTn7kM58DngMGBxexfWBjN6UxD3JEMv7PmSna7VguesVA7MJM1VbMXoNEB6-HCecQ3Phe6mVqzz1TRT1hVjQ1NUiNVXV3STHyqUNDII6pCAQnRapFM2f2XbgJ0U"/>
+<span class="absolute font-label-lg text-label-lg text-white bg-black/40 w-full text-center bottom-0 py-1">JAPÃO</span>
+</div>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-xs w-[72px]">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden relative shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl">more_horiz</span>
+<span class="absolute font-label-lg text-label-lg text-on-surface bg-surface-container/80 w-full text-center bottom-0 py-1">MAIS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Restaurantes Próximos -->
+<section class="flex flex-col gap-md">
+<h2 class="font-headline-md text-headline-md text-on-background">Restaurantes Próximos</h2>
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-xl shadow-md overflow-hidden flex flex-col border border-outline-variant/30">
+<div class="relative w-full pb-[56.25%] bg-surface-container-highest">
+<img alt="Restaurant interior" class="absolute inset-0 w-full h-full object-cover" data-alt="A modern, brightly lit restaurant interior. Tables are neatly arranged with clean lines and subtle decorations. The atmosphere is welcoming and lively, suggesting a popular local spot. The lighting is warm white, creating a pleasant dining environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhaqvKmQ8oLXGDO6DSpxiNp5mO_ZxZjZLYMIJXN4bk61z7p4wcZSM8jRA__jnWxTDBm9t2YDX5qGI6YOPytGME80mLvG8iVC_XZlO__vuTsOcb6KsNwbwqX9m4Tx_yl5W6GJYs_sHFsDoiy1yr_IpRO4EgraoUMFdkTSXb7DahWT1Jt0ZPFXxb60GT4wxinUz1LSo0C2aFVqYEnsCRmTy2xTa0OguDV-0ywuGpKts1k0c09H2JnFlpa7nF0wjaetA0O08rpmUgfZw"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-weight="fill">favorite</span>
+</button>
+</div>
+<div class="p-md flex flex-col gap-xs">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-title-lg text-on-surface truncate">Kaluanda Gourmet</h3>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-weight="fill">star</span>
+<span class="font-label-lg text-label-lg text-secondary">4.8</span>
+</div>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant"><span>Angolana</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span>Ilha do Cabo</span></div>
+<div class="flex items-center gap-4 mt-2 pt-2 border-t border-outline-variant font-body-md text-body-md">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>30-40 min</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">directions_bike</span>
+<span>Grátis</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-xl shadow-md overflow-hidden flex flex-col border border-outline-variant/30">
+<div class="relative w-full pb-[56.25%] bg-surface-container-highest">
+<img alt="Steakhouse" class="absolute inset-0 w-full h-full object-cover" data-alt="A close up shot of a perfectly grilled steak resting on a wooden board, accompanied by fresh rosemary and roasted garlic. The grill marks are distinct, and the meat looks succulent. The lighting is slightly moody, highlighting the rich textures and deep colors of the food." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqjkdInaJKaYLF_vS33T7EO3ED8Z7VCRt1vgZyynshJzYJp-D1AI9-d72RcmgzvqPDiis-3wb6OL0DpQwFNKEYGPhTbxs-y3PsEJVXsn38agGIyo8U6Grl6P5PD47oizTCQg0k8ojK4D9MboTTMVbMfyPXqF50sMnnHau2-L2aSLAPfwOOLY8nlEm2tkWtnAHTMBtVQRimr6x97o0-Y60R5iOz16qkxoqaaOcExHsA5_1wmXK-60ew0hwYpFfsRLtLUTDARVhd0oE"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-md flex flex-col gap-xs">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-title-lg text-on-surface truncate">Grelha do Talatona</h3>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-weight="fill">star</span>
+<span class="font-label-lg text-label-lg text-secondary">4.5</span>
+</div>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant"><span>Churrasco</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span>Talatona</span></div>
+<div class="flex items-center gap-4 mt-2 pt-2 border-t border-outline-variant font-body-md text-body-md">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>45-55 min</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">directions_bike</span>
+<span>Kz 500</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface font-body-md text-[11px] font-medium docked full-width bottom-0 z-50 border-t border-outline-variant shadow-[0_-4px_10px_rgba(0,0,0,0.5)] fixed left-0 w-full h-16 flex justify-around items-center px-2 pb-safe md:hidden max-w-md mx-auto right-0">
+<a class="flex flex-col items-center justify-center text-primary font-semibold hover:bg-surface-container rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-weight="fill">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">search</span>
+<span>Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">receipt_long</span>
+<span>Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

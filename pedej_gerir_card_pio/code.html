@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-primary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-primary-fixed-variant": "#812900",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-error-container": "#93000a",
+                        "background": "#f9f9f9",
+                        "secondary": "#815500",
+                        "inverse-primary": "#ffb59b",
+                        "on-surface-variant": "#5b4137",
+                        "primary": "#a53700",
+                        "on-secondary-container": "#6a4500",
+                        "secondary-fixed-dim": "#ffb94d",
+                        "on-surface": "#1a1c1c",
+                        "primary-fixed": "#ffdbcf",
+                        "primary-container": "#ce4600",
+                        "secondary-fixed": "#ffddb2",
+                        "surface-container": "#eeeeee",
+                        "tertiary-container": "#757474",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-fixed": "#291800",
+                        "outline-variant": "#e4beb2",
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fffcfb",
+                        "secondary-container": "#feae20",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-variant": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ffb59b",
+                        "surface-tint": "#a93800",
+                        "on-primary-fixed": "#380d00",
+                        "outline": "#8f7066",
+                        "tertiary": "#5c5c5c",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "space-sm": "8px",
+                        "container-margin": "20px",
+                        "space-xl": "32px",
+                        "space-md": "16px",
+                        "space-xs": "4px",
+                        "space-lg": "24px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "button": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md fixed top-0 z-50 w-full border-b border-neutral-100 dark:border-neutral-800 shadow-sm">
+<div class="flex justify-between items-center w-full px-4 py-3">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-150 p-2 rounded-full hover:bg-orange-50">
+<span class="material-symbols-outlined text-orange-600" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-xl text-on-surface">Gerir Cardápio</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-orange-600 dark:text-orange-500 font-black text-xl uppercase italic">Kamba Delivery</span>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border-2 border-primary">
+<img alt="Profile photo" class="w-full h-full object-cover" data-alt="A professional close-up of a smiling Angolan restaurant owner in a clean modern kitchen setting. The lighting is bright and warm, reflecting a high-energy and reliable professional atmosphere. The image uses a vibrant, high-contrast style with rich tones that align with a modern corporate aesthetic." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+</div>
+</div>
+</header>
+<main class="mt-20 px-container-margin max-w-5xl mx-auto">
+<!-- Hero Search & Filter -->
+<section class="mb-space-lg">
+<div class="bg-primary-container p-space-lg rounded-xl shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-primary-container mb-1">Personalize seu Cardápio</h2>
+<p class="font-body-md text-body-md text-on-primary-container/80">Atualize preços e disponibilidade em tempo real.</p>
+</div>
+<div class="relative w-full md:w-72">
+<input class="w-full py-3 px-10 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/60 focus:ring-2 focus:ring-white/30 focus:outline-none backdrop-blur-sm" placeholder="Procurar item..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-white/70" data-icon="search">search</span>
+</div>
+</div>
+</section>
+<!-- Categories Chips -->
+<nav class="flex gap-space-sm overflow-x-auto hide-scrollbar mb-space-lg py-2">
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-secondary-container text-on-secondary-fixed font-button text-button shadow-sm">Todos</button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-white border border-outline-variant text-on-surface font-button text-button hover:bg-orange-50 transition-colors">Pratos Principais</button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-white border border-outline-variant text-on-surface font-button text-button hover:bg-orange-50 transition-colors">Bebidas</button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-white border border-outline-variant text-on-surface font-button text-button hover:bg-orange-50 transition-colors">Sobremesas</button>
+</nav>
+<!-- Menu Section: Pratos Principais -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-md text-headline-md flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600" data-icon="restaurant">restaurant</span>
+                    Pratos Principais
+                </h3>
+<span class="text-label-lg font-label-lg bg-orange-100 text-orange-700 px-3 py-1 rounded-full">8 Itens</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Item Card 1 -->
+<div class="bg-white p-space-md rounded-2xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container flex gap-4 transition-transform hover:scale-[1.01]">
+<div class="w-24 h-24 rounded-xl bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Food Thumbnail" class="w-full h-full object-cover" data-alt="A delicious, high-contrast photo of a traditional Angolan dish, Muamba de Galinha, served in a rustic clay bowl. The vibrant oranges and yellows of the palm oil sauce are highlighted by bright, professional food photography lighting. The scene is clean and appetizing, emphasizing freshness and local flavor." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-label-lg text-label-lg text-on-surface">Mufete de Peixe</h4>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
+</label>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1 mt-1">Peixe grelhado com feijão de óleo de palma e mandioca.</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-md text-primary">4.500 Kz</span>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-neutral-100 text-neutral-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-error-container text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="bg-white p-space-md rounded-2xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container flex gap-4 transition-transform hover:scale-[1.01]">
+<div class="w-24 h-24 rounded-xl bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Food Thumbnail" class="w-full h-full object-cover" data-alt="A gourmet presentation of Calulu de Carne, a traditional rich stew, photographed from a high angle in a bright, modern studio setting. The colors are deeply saturated and rich, emphasizing the appetizing texture of the dish. The lighting is soft and diffuse, creating a premium feel." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-label-lg text-label-lg text-on-surface">Calulu de Carne</h4>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
+</label>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-1 mt-1">Carne seca cozida com legumes tradicionais e azeite.</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-md text-primary">3.800 Kz</span>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg hover:bg-neutral-100 text-neutral-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-error-container text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section: Bebidas -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-md text-headline-md flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600" data-icon="local_bar">local_bar</span>
+                    Bebidas
+                </h3>
+<span class="text-label-lg font-label-lg bg-orange-100 text-orange-700 px-3 py-1 rounded-full">12 Itens</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-white p-space-md rounded-2xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container flex items-center justify-between transition-transform hover:scale-[1.01]">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600 text-3xl" data-icon="glass_cup">glass_cup</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Cerveja Cuca (Caneca)</h4>
+<p class="text-sm text-on-surface-variant">Gelada ao ponto.</p>
+<span class="font-bold text-primary block mt-1">1.200 Kz</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
+</label>
+</div>
+<div class="bg-white p-space-md rounded-2xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container flex items-center justify-between transition-transform hover:scale-[1.01]">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600 text-3xl" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Sumo Natural (Maracujá)</h4>
+<p class="text-sm text-on-surface-variant">Fruta fresca da época.</p>
+<span class="font-bold text-primary block mt-1">1.500 Kz</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Menu Section: Sobremesas -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-md text-headline-md flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600" data-icon="icecream">icecream</span>
+                    Sobremesas
+                </h3>
+<span class="text-label-lg font-label-lg bg-orange-100 text-orange-700 px-3 py-1 rounded-full">4 Itens</span>
+</div>
+<div class="bg-white p-space-md rounded-2xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container flex items-center justify-between transition-transform hover:scale-[1.01] max-w-md">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Dessert" class="w-full h-full object-cover" data-alt="A vibrant and colorful presentation of fresh tropical fruits including papaya, mango, and passion fruit, artfully arranged on a clean white plate. The lighting is bright and cheerful, suggesting a healthy and refreshing dessert option. High contrast and clean composition align with the modern design brand." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Mousse de Chocolate</h4>
+<p class="text-sm text-on-surface-variant">Cremosa com raspas.</p>
+<span class="font-bold text-primary block mt-1">2.200 Kz</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-600"></div>
+</label>
+</div>
+</section>
+</main>
+<!-- FAB: Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-[0_8px_24px_rgba(165,55,0,0.4)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800 shadow-[0_-4px_12px_rgba(41,41,41,0.08)] flex justify-around items-center px-2 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 hover:text-orange-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="delivery_dining">delivery_dining</span>
+<span class="text-[11px] font-medium font-['Inter']">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 hover:text-orange-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-[11px] font-medium font-['Inter']">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-2xl px-4 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-[11px] font-medium font-['Inter']">Cardápio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 hover:text-orange-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Profile</span>
+</a>
+</nav>
+</body></html>

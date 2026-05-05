@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Settings - DelivEat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-surface-variant": "#5b4137",
+                    "on-secondary-container": "#6a4500",
+                    "primary": "#a53700",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-low": "#f3f3f3",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#624000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary-fixed": "#ffddb2",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#380d00",
+                    "primary-fixed": "#ffdbcf",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "tertiary-fixed": "#e4e2e1",
+                    "secondary": "#815500",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#812900",
+                    "on-background": "#1a1c1c",
+                    "secondary-fixed-dim": "#ffb94d",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "outline-variant": "#e4beb2",
+                    "on-tertiary-container": "#fffcfb",
+                    "on-secondary-fixed": "#291800",
+                    "surface-container": "#eeeeee",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#5c5c5c",
+                    "error": "#ba1a1a",
+                    "primary-container": "#ce4600",
+                    "surface": "#f9f9f9",
+                    "surface-dim": "#dadada",
+                    "primary-fixed-dim": "#ffb59b",
+                    "secondary-container": "#feae20",
+                    "outline": "#8f7066",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-container": "#fffbff",
+                    "tertiary-container": "#757474",
+                    "background": "#f9f9f9",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-bright": "#f9f9f9",
+                    "surface-tint": "#a93800",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-primary": "#ffb59b",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "space-sm": "8px",
+                    "gutter": "16px",
+                    "container-margin": "20px",
+                    "space-xl": "32px",
+                    "space-xs": "4px",
+                    "space-md": "16px",
+                    "space-lg": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "button": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-background min-h-screen antialiased flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 shadow-sm sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 w-full flex justify-between items-center h-14 px-4 hidden md:flex">
+<div class="flex items-center gap-space-sm hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">location_on</span>
+</div>
+<div class="font-['Inter'] text-lg font-bold tracking-tight text-slate-900 dark:text-slate-50 text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500 text-center flex-1">
+            DelivEat
+        </div>
+<div class="flex items-center hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-surface-variant">
+<img alt="User avatar profile" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of a young urban professional with a warm, welcoming smile. The lighting is soft and bright, creating a clean, modern light-mode aesthetic. The background is slightly blurred with subtle hints of vibrant high-contrast orange and yellow accents, reflecting a fast-paced, high-energy brand identity. The overall mood is reliable, friendly, and approachable, perfectly suited for a premium delivery app profile picture." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-5xl mx-auto px-container-margin py-space-lg pb-24 md:pb-space-lg grid grid-cols-1 md:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Profile Card & Quick Stats -->
+<div class="md:col-span-4 flex flex-col gap-space-md">
+<!-- Main Profile Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-lg flex flex-col items-center text-center shadow-[0_12px_24px_-12px_rgba(41,41,41,0.1)] border border-surface-variant relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-br from-primary-fixed to-secondary-fixed opacity-50"></div>
+<div class="relative w-28 h-28 rounded-full overflow-hidden border-4 border-surface-container-lowest shadow-sm mb-space-md mt-4">
+<img alt="Profile Avatar" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of a young urban professional with a warm, welcoming smile. The lighting is soft and bright, creating a clean, modern light-mode aesthetic. The background is slightly blurred with subtle hints of vibrant high-contrast orange and yellow accents, reflecting a fast-paced, high-energy brand identity. The overall mood is reliable, friendly, and approachable, perfectly suited for a premium delivery app profile picture." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary rounded-full p-1 border-2 border-surface-container-lowest hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-1">Alexandre João</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">alexandre.joao@example.ao</p>
+<div class="flex items-center gap-space-xs text-secondary-fixed-dim font-label-lg text-label-lg bg-surface-container py-1 px-3 rounded-full">
+<span class="material-symbols-outlined text-[16px] filled">star</span>
+<span>Gold Member</span>
+</div>
+</div>
+<!-- App Settings Bento -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-md shadow-[0_12px_24px_-12px_rgba(41,41,41,0.1)] border border-surface-variant">
+<h2 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-space-sm px-2">App Settings</h2>
+<div class="flex flex-col gap-1">
+<button class="flex items-center justify-between w-full p-3 rounded-xl hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<span class="font-button text-button text-on-surface">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-xl hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">language</span>
+</div>
+<span class="font-button text-button text-on-surface">Language</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">English</span>
+</button>
+<div class="flex items-center justify-between w-full p-3 rounded-xl hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<span class="font-button text-button text-on-surface">Dark Mode</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Account Details Grid -->
+<div class="md:col-span-8 flex flex-col gap-space-lg">
+<!-- Bento Grid Row 1 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
+<!-- Personal Information -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-md shadow-[0_12px_24px_-12px_rgba(41,41,41,0.1)] border border-surface-variant flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined">person</span>
+</div>
+<button class="text-primary hover:text-primary-container font-button text-button p-2">Edit</button>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Personal Info</h2>
+<div class="space-y-3">
+<div>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Full Name</p>
+<p class="font-body-md text-body-md text-on-surface">Alexandre João</p>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface-variant">Phone Number</p>
+<p class="font-body-md text-body-md text-on-surface">+244 923 123 456</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Methods -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-md shadow-[0_12px_24px_-12px_rgba(41,41,41,0.1)] border border-surface-variant flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary mb-3">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<button class="text-primary hover:text-primary-container font-button text-button p-2">Add</button>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Payment Methods</h2>
+<div class="bg-surface rounded-xl p-3 flex items-center justify-between border border-surface-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-7 bg-[#1A1F71] rounded flex items-center justify-center text-white text-[10px] font-bold italic">VISA</div>
+<div>
+<p class="font-button text-button text-on-surface">•••• 4242</p>
+<p class="font-label-lg text-label-lg text-on-surface-variant text-[12px]">Expires 12/25</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Order History Hero Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-md shadow-[0_12px_24px_-12px_rgba(41,41,41,0.1)] border border-surface-variant flex flex-col sm:flex-row items-center justify-between gap-space-md relative overflow-hidden group cursor-pointer hover:border-primary/30 transition-colors">
+<div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="flex items-center gap-space-md z-10 w-full sm:w-auto">
+<div class="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center text-on-primary shadow-md">
+<span class="material-symbols-outlined filled text-[28px]">receipt_long</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Order History</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">View past orders and reorder favorites</p>
+</div>
+</div>
+<div class="z-10 bg-surface rounded-full p-2 group-hover:bg-primary-fixed transition-colors hidden sm:block">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Support & Legal Section -->
+<div class="bg-surface-container-lowest rounded-[24px] p-space-md shadow-[0_12px_24px_-12px_rgba(41,41,41,0.1)] border border-surface-variant">
+<h2 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-space-sm px-2">Support &amp; Legal</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<button class="flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container transition-colors text-left group">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">help</span>
+</div>
+<span class="font-button text-button text-on-surface flex-1">Help Center</span>
+</button>
+<button class="flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container transition-colors text-left group">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">description</span>
+</div>
+<span class="font-button text-button text-on-surface flex-1">Terms of Service</span>
+</button>
+<button class="flex items-center gap-3 p-3 rounded-xl hover:bg-error-container transition-colors text-left group col-span-1 sm:col-span-2 mt-2 border border-error/20 bg-error/5">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-error">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<span class="font-button text-button text-error flex-1">Log Out</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-white dark:bg-slate-900 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] border-t border-slate-100 dark:border-slate-800 fixed bottom-0 left-0 w-full h-16 flex justify-around items-center px-2 pb-safe z-50">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-['Inter'] text-[11px] font-medium">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14">
+<span class="material-symbols-outlined mb-1">receipt_long</span>
+<span class="font-['Inter'] text-[11px] font-medium">Orders</span>
+</button>
+<!-- Active Tab: Profile -->
+<button class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-500 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition-all active:scale-90 duration-150 ease-out w-16 h-14">
+<span class="material-symbols-outlined filled mb-1">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

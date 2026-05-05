@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Culinária Angolana</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#feae20",
+                        "on-secondary-fixed": "#291800",
+                        "surface-tint": "#a93800",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "inverse-primary": "#ffb59b",
+                        "on-surface-variant": "#5b4137",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-secondary-container": "#6a4500",
+                        "surface-container": "#eeeeee",
+                        "secondary": "#815500",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed-dim": "#ffb94d",
+                        "on-secondary-fixed-variant": "#624000",
+                        "outline": "#8f7066",
+                        "secondary-fixed": "#ffddb2",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#e4beb2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ffb59b",
+                        "on-primary-fixed": "#380d00",
+                        "surface-dim": "#dadada",
+                        "on-surface": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "tertiary": "#5c5c5c",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed": "#ffdbcf",
+                        "on-primary-fixed-variant": "#812900",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#757474",
+                        "on-tertiary-container": "#fffcfb",
+                        "primary-container": "#ce4600",
+                        "surface-container-low": "#f3f3f3",
+                        "primary": "#a53700"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "space-md": "16px",
+                        "container-margin": "20px",
+                        "gutter": "16px",
+                        "space-xl": "32px",
+                        "space-lg": "24px",
+                        "space-xs": "4px",
+                        "space-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "button": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-zinc-950 docked full-width top-0 sticky z-50 border-b border-zinc-100 dark:border-zinc-800 shadow-sm flex justify-between items-center w-full px-4 h-16">
+<button class="text-[#292929] dark:text-zinc-400 hover:opacity-80 transition-opacity active:scale-95 duration-150 p-2">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-[#F95A0D] dark:text-[#F95A0D] font-['Inter'] font-semibold text-lg tracking-tight">Angolan Food</h1>
+<button class="text-[#292929] dark:text-zinc-400 hover:opacity-80 transition-opacity active:scale-95 duration-150 p-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</header>
+<main class="pb-24">
+<!-- Hero Banner -->
+<section class="relative h-64 w-full bg-surface-container overflow-hidden">
+<img alt="High-quality image of Mufete or Funge with a text overlay 'O melhor da nossa terra'." class="w-full h-full object-cover" data-alt="A mouth-watering, high-resolution food photography shot of a traditional Angolan dish, either Mufete or Funge, beautifully plated. The setting is bright and inviting, utilizing a light-mode aesthetic with warm natural sunlight highlighting the rich textures and vibrant colors of the food. The composition is dynamic, suitable for a hero banner in a modern food delivery app. Subtle orange and yellow accents in the background or props echo the app's high-energy, high-contrast color palette, stimulating appetite and conveying freshness." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-container-margin">
+<h2 class="text-on-primary font-headline-lg text-headline-lg">O melhor da nossa terra</h2>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="py-space-md px-container-margin overflow-x-auto hide-scrollbar border-b border-surface-variant">
+<div class="flex gap-space-sm whitespace-nowrap min-w-max">
+<button class="bg-secondary-container text-on-secondary-fixed px-4 py-2 rounded-full font-button text-button shadow-sm hover:opacity-90 transition-opacity">Mais Próximos</button>
+<button class="bg-surface text-on-surface px-4 py-2 rounded-full font-button text-button border border-outline shadow-sm hover:bg-surface-variant transition-colors">Melhor Avaliados</button>
+<button class="bg-surface text-on-surface px-4 py-2 rounded-full font-button text-button border border-outline shadow-sm hover:bg-surface-variant transition-colors">Entrega Grátis</button>
+<button class="bg-surface text-on-surface px-4 py-2 rounded-full font-button text-button border border-outline shadow-sm hover:bg-surface-variant transition-colors">Preço (Kz)</button>
+</div>
+</section>
+<!-- Restaurant List -->
+<section class="p-container-margin flex flex-col gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow cursor-pointer">
+<div class="h-40 bg-surface-container relative">
+<img alt="Kaluanda Gourmet" class="w-full h-full object-cover" data-alt="A delicious looking grilled meat dish from an Angolan restaurant. The photo is bright and appetizing, fitting a modern food delivery app aesthetic with warm lighting. Subtle orange and yellow tones enhance the crave-worthy appeal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA52GVbp5z9NDDUZyWmgOkhXaHAXKJbs8R8E8SV5eookyN3jYU2E6_NAgw3X8m6XhXshAR1blvIIHPFCzNShUTu9jpcAEUo3kPp7T1KCVgTm2GGoBhUX_MqkxawrLFyJCYxv3UOfEv652vPFdS7c8Sswqk_cTR13ZbASXE80A5n3Q2cdJVcfw09DlhydMy4H-LyuGQdd4ycf81E0TatdnVY8yHdR2zx3I2htHcDrXnOp9o30MWnosROZE19IMS4ZOQJsK1WN-zCm34"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest text-on-surface px-2 py-1 rounded-full text-label-lg font-label-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined filled text-secondary-container text-[16px]">star</span>
+                        4.8
+                    </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Kaluanda Gourmet</h3>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-md text-body-md mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>30-40 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Kz 500</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow cursor-pointer">
+<div class="h-40 bg-surface-container relative">
+<img alt="Grelha do Talatona" class="w-full h-full object-cover" data-alt="A perfectly grilled fish dish with sides, representing Angolan cuisine. Bright, light-mode food photography style with warm, appetizing colors. The high-contrast lighting makes the food pop against a clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKoeThQ8MJl1IM58yTq-8zkaG_IDVJGQAFdr4XC9YH13mZqm03g2KW5pixDE2t_zunb4-NEdnA3ia56dB-vYiyNqnJdN4oegzI1VnsguoyLeHtmQM53b8J2qjksXSyW2QDINYjVlP0oxUX47rKBbVRA49FvAoc5VaGGvxk-yF6xbySn5-ov7YkjxUm-YvALv0q-qDsf127A6KnAlgAer5RjdaEvcIq1XY5E0qBKQZfjrurZwrJD7hAWji2Jy2uU58Y-RFE5h_ECWE"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest text-on-surface px-2 py-1 rounded-full text-label-lg font-label-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined filled text-secondary-container text-[16px]">star</span>
+                        4.5
+                    </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Grelha do Talatona</h3>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-md text-body-md mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>45-55 min</span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span class="font-semibold">Entrega Grátis</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-variant overflow-hidden flex flex-col hover:shadow-md transition-shadow cursor-pointer">
+<div class="h-40 bg-surface-container relative">
+<img alt="Sabores da Ilha" class="w-full h-full object-cover" data-alt="A vibrant and savory Angolan stew dish served in a modern bowl. The image uses a high-key, clean aesthetic typical of premium food delivery apps. Warm lighting emphasizes the rich, crave-worthy textures and colors of the meal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAqOu6KX_6ylBpoBqjamqYJBiafZr2vlvvj5MBfkWU7V--eVmFzVvpNshdzQ8VwRdrMw17uKGQAt_kWvIOynAAPR9I3LYhORxkr8MIj2Jd8P9oLVaSpPQ2nRh8xgl9FfgudHPJfM3OyC4TB1-6mgBisT0MY2XjtDOv-n25820G7oFNGDuN0g-h4sw85IJOT17OGek_BKaFqTuzkScn5TUCcprGzk8ka4pY-6J2oHz-zuNjPJT2dbdKOkSb8xbZDPBP0OGTE5sZ9lo"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest text-on-surface px-2 py-1 rounded-full text-label-lg font-label-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined filled text-secondary-container text-[16px]">star</span>
+                        4.7
+                    </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Sabores da Ilha</h3>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-md text-body-md mt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>25-35 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Kz 300</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white dark:bg-zinc-950 fixed bottom-0 w-full z-50 rounded-t-2xl border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_12px_rgba(41,41,41,0.08)] flex justify-around items-center h-20 pb-safe px-2 md:hidden">
+<button class="flex flex-col items-center justify-center text-[#292929] dark:text-zinc-400 px-3 py-1 hover:text-[#F95A0D] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#F95A0D] bg-orange-50 dark:bg-orange-900/20 rounded-xl px-3 py-1 hover:text-[#F95A0D] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#292929] dark:text-zinc-400 px-3 py-1 hover:text-[#F95A0D] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Orders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#292929] dark:text-zinc-400 px-3 py-1 hover:text-[#F95A0D] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] font-medium mt-1">Profile</span>
+</button>
+</nav>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</body></html>

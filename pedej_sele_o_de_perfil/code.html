@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-ao"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ffb59b",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#812900",
+                        "background": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#291800",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#5c5c5c",
+                        "on-primary-fixed": "#380d00",
+                        "inverse-primary": "#ffb59b",
+                        "surface-container-low": "#f3f3f3",
+                        "outline": "#8f7066",
+                        "inverse-on-surface": "#f1f1f1",
+                        "outline-variant": "#e4beb2",
+                        "on-background": "#1a1c1c",
+                        "primary-fixed": "#ffdbcf",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#6a4500",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#a93800",
+                        "on-tertiary-container": "#fffcfb",
+                        "secondary-fixed": "#ffddb2",
+                        "primary-container": "#ce4600",
+                        "tertiary-container": "#757474",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-container": "#feae20",
+                        "on-surface-variant": "#5b4137",
+                        "secondary-fixed-dim": "#ffb94d",
+                        "surface-container": "#eeeeee",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "on-surface": "#1a1c1c",
+                        "secondary": "#815500",
+                        "primary": "#a53700",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "space-md": "16px",
+                        "space-sm": "8px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "space-xl": "32px",
+                        "space-lg": "24px",
+                        "space-xs": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-shadow {
+            box-shadow: 0 12px 24px -4px rgba(41, 41, 41, 0.08);
+        }
+        .bg-pattern {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(#FBAC1D 0.5px, transparent 0.5px), radial-gradient(#F95A0D 0.5px, #f9f9f9 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Background Texture -->
+<div class="absolute inset-0 bg-pattern pointer-events-none"></div>
+<!-- Header / Brand Anchor -->
+<header class="relative z-10 w-full flex flex-col items-center pt-12 pb-8 px-container-margin">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#F95A0D] text-4xl" data-icon="restaurant" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h1 class="font-headline-lg text-headline-lg tracking-tighter text-[#F95A0D]">PedeJá</h1>
+</div>
+<p class="font-label-lg text-label-lg text-tertiary-container uppercase tracking-[0.2em]">Angola</p>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex-grow w-full max-w-screen-xl mx-auto px-container-margin flex flex-col justify-center">
+<div class="text-center mb-10">
+<h2 class="font-headline-md text-headline-md mb-2">Bem-vindo a Luanda</h2>
+<p class="text-tertiary max-w-md mx-auto">Escolha como deseja interagir com a maior rede de entregas de Angola hoje.</p>
+</div>
+<!-- Role Selection Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Option: Cliente -->
+<button class="group flex flex-col items-center p-8 bg-surface-container-lowest rounded-[24px] card-shadow border border-gray-100 hover:border-[#F95A0D] transition-all duration-300 transform hover:-translate-y-2 active:scale-95 text-center">
+<div class="w-24 h-24 mb-6 rounded-full bg-orange-50 flex items-center justify-center text-[#F95A0D] group-hover:bg-[#F95A0D] group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="fastfood">fastfood</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2 text-on-background">Sou Cliente</h3>
+<p class="text-sm text-tertiary mb-6">Peça os melhores pratos de Luanda e receba em casa com rapidez.</p>
+<div class="mt-auto py-3 px-6 bg-secondary-container text-on-secondary-fixed font-button text-button rounded-full transition-transform group-hover:scale-105">
+                    Fazer Pedido
+                </div>
+</button>
+<!-- Option: Restaurante -->
+<button class="group flex flex-col items-center p-8 bg-surface-container-lowest rounded-[24px] card-shadow border border-gray-100 hover:border-[#FBAC1D] transition-all duration-300 transform hover:-translate-y-2 active:scale-95 text-center">
+<div class="w-24 h-24 mb-6 rounded-full bg-yellow-50 flex items-center justify-center text-[#FBAC1D] group-hover:bg-[#FBAC1D] group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="storefront">storefront</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2 text-on-background">Sou Restaurante</h3>
+<p class="text-sm text-tertiary mb-6">Gerencie suas vendas, cardápio e alcance milhares de novos clientes.</p>
+<div class="mt-auto py-3 px-6 bg-surface-container-high text-on-surface font-button text-button rounded-full border border-outline-variant transition-transform group-hover:scale-105">
+                    Gerir Vendas
+                </div>
+</button>
+<!-- Option: Entregador -->
+<button class="group flex flex-col items-center p-8 bg-surface-container-lowest rounded-[24px] card-shadow border border-gray-100 hover:border-[#F95A0D] transition-all duration-300 transform hover:-translate-y-2 active:scale-95 text-center">
+<div class="w-24 h-24 mb-6 rounded-full bg-orange-50 flex items-center justify-center text-[#F95A0D] group-hover:bg-[#F95A0D] group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="delivery_dining">delivery_dining</span>
+</div>
+<h3 class="font-headline-md text-xl mb-2 text-on-background">Sou Entregador</h3>
+<p class="text-sm text-tertiary mb-6">Faça seu próprio horário, realize entregas e aumente sua renda mensal.</p>
+<div class="mt-auto py-3 px-6 bg-surface-container-high text-on-surface font-button text-button rounded-full border border-outline-variant transition-transform group-hover:scale-105">
+                    Começar Entregas
+                </div>
+</button>
+</div>
+<!-- Visual Anchor (Hero Image Replacement) -->
+<div class="w-full max-w-4xl mx-auto mb-16 overflow-hidden rounded-[32px] h-[300px] relative card-shadow">
+<img alt="Deliciosa comida angolana em destaque" class="w-full h-full object-cover" data-alt="A cinematic, high-angle close-up of traditional Angolan cuisine, featuring vibrant colors and steam rising from the dish. The lighting is warm and golden, reflecting a modern, craving-worthy aesthetic consistent with a premium food delivery app. The scene is set on a minimalist, clean white table that emphasizes the rich textures of the food. The overall mood is appetizing, energetic, and highly professional, utilizing the brand's primary orange and yellow accents in the background details." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<div class="text-white">
+<p class="font-headline-md text-2xl">Os sabores de Luanda</p>
+<p class="opacity-90">Entregues onde você estiver, com segurança e rapidez.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Area -->
+<footer class="relative z-10 w-full py-8 border-t border-gray-100 bg-white/50 backdrop-blur-sm">
+<div class="max-w-screen-xl mx-auto px-container-margin flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-tertiary text-sm">
+                © 2024 PedeJá Angola. Todos os direitos reservados.
+            </div>
+<nav class="flex gap-6">
+<a class="text-sm font-label-lg text-tertiary hover:text-[#F95A0D] transition-colors" href="#">Ajuda</a>
+<a class="text-sm font-label-lg text-tertiary hover:text-[#F95A0D] transition-colors" href="#">Termos de Uso</a>
+<a class="text-sm font-label-lg text-tertiary hover:text-[#F95A0D] transition-colors" href="#">Privacidade</a>
+</nav>
+</div>
+</footer>
+</body></html>

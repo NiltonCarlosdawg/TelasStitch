@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-AO"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed": "#291800",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-low": "#f3f3f3",
+                        "outline": "#8f7066",
+                        "tertiary": "#5c5c5c",
+                        "on-primary-fixed": "#380d00",
+                        "inverse-primary": "#ffb59b",
+                        "on-primary-fixed-variant": "#812900",
+                        "primary-fixed-dim": "#ffb59b",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#6a4500",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "primary-fixed": "#ffdbcf",
+                        "outline-variant": "#e4beb2",
+                        "on-background": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#624000",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "tertiary-container": "#757474",
+                        "secondary-container": "#feae20",
+                        "on-surface-variant": "#5b4137",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#ce4600",
+                        "secondary-fixed": "#ffddb2",
+                        "on-tertiary-container": "#fffcfb",
+                        "surface-tint": "#a93800",
+                        "primary": "#a53700",
+                        "secondary": "#815500",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed-dim": "#ffb94d",
+                        "on-surface": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "space-md": "16px",
+                        "space-sm": "8px",
+                        "gutter": "16px",
+                        "container-margin": "20px",
+                        "space-xl": "32px",
+                        "space-lg": "24px",
+                        "space-xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-800 shadow-sm dark:shadow-none flex items-center justify-between px-4 h-16 w-full">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-500">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-semibold text-lg text-orange-600 dark:text-orange-500">Profile Settings</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-500">settings</span>
+</button>
+</header>
+<main class="pt-20 px-container-margin space-y-space-lg">
+<!-- Profile Hero Section -->
+<section class="flex flex-col items-center py-space-lg">
+<div class="relative">
+<div class="w-24 h-24 rounded-full overflow-hidden shadow-[0_12px_24px_rgba(41,41,41,0.1)] border-4 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="A professional and friendly portrait of a modern Angolan man named Alexandre João, smiling warmly in a bright, high-key studio setting. The lighting is soft and diffused, creating a premium corporate aesthetic that aligns with a high-energy delivery brand. The background is a clean, minimalist gradient of soft oranges and whites, emphasizing a crave-worthy and reliable personality. His expression conveys confidence and satisfaction, captured with high-resolution clarity and deep color saturation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwookMyiYd3ob-6XL8AYhq2pxXadUXxyStwbJR0MJwyxegAajDxJ-RJ9yYyM4wr_EuDKqgKbURhx1kP0u-se3g1niLIdYsD1ALqDA4dd0JoSpzkNXQkFbin5l5nsTrFxRQ0sr2VwoaIKdjbMDXsN3p_VXw97WRJtNbiszFAp5UX67EN6VyiWuMJcZPHMhK1b0qG4eKOr9-4jXIeABxKgdBwYuGeZQrg5PdsDdUnvddcOfQM8DeintNzl15D5qKPtISsWUewQqRItA"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-fixed px-3 py-1 rounded-full flex items-center gap-1 shadow-md border-2 border-white">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Gold Member</span>
+</div>
+</div>
+<div class="mt-space-md text-center">
+<h2 class="font-headline-md text-on-background">Alexandre João</h2>
+<p class="font-body-md text-tertiary">alexandre.joao@exemplo.ao</p>
+</div>
+</section>
+<!-- Account Settings Group -->
+<div class="space-y-space-sm">
+<h3 class="font-label-lg text-tertiary px-1">Account Settings</h3>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container overflow-hidden">
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">person</span>
+<span class="font-body-md text-on-surface">Edit Profile</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div class="text-left">
+<span class="block font-body-md text-on-surface">Saved Addresses</span>
+<span class="block text-[12px] text-tertiary">Luanda, Angola</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">payments</span>
+<div class="text-left">
+<span class="block font-body-md text-on-surface">Payment Methods</span>
+<span class="block text-[12px] text-tertiary">Multicaixa Caixa •••• 8842</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Preferences Group -->
+<div class="space-y-space-sm">
+<h3 class="font-label-lg text-tertiary px-1">Preferences</h3>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container overflow-hidden">
+<div class="flex items-center justify-between p-space-md border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">notifications</span>
+<span class="font-body-md text-on-surface">Notifications</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">language</span>
+<div class="text-left">
+<span class="block font-body-md text-on-surface">Language</span>
+<span class="block text-[12px] text-tertiary">Português (Angola)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary">expand_more</span>
+</button>
+<div class="flex items-center justify-between p-space-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">dark_mode</span>
+<span class="font-body-md text-on-surface">Dark Mode</span>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Support & Legal Group -->
+<div class="space-y-space-sm">
+<h3 class="font-label-lg text-tertiary px-1">Support &amp; Legal</h3>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(41,41,41,0.05)] border border-surface-container overflow-hidden">
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">help_center</span>
+<span class="font-body-md text-on-surface">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<span class="font-body-md text-on-surface">Terms of Service</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="font-body-md text-on-surface">Privacy Settings</span>
+</div>
+<span class="material-symbols-outlined text-tertiary">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Logout Section -->
+<div class="pt-space-lg pb-space-xl">
+<button class="w-full py-4 px-6 rounded-full border-2 border-surface-container text-error font-button hover:bg-error/5 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">logout</span>
+                Sair
+            </button>
+<p class="text-center text-[12px] text-tertiary mt-space-md">Versão 2.4.1 (Angola)</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-4 pb-2">
+<button class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[12px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">reorder</span>
+<span class="font-['Inter'] text-[12px] font-medium">Orders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-orange-500 dark:hover:text-orange-400 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Inter'] text-[12px] font-medium">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-orange-600 dark:text-orange-500 bg-orange-50/50 dark:bg-orange-900/20 rounded-xl px-3 py-1 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Inter'] text-[12px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-AO"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffddb2",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#380d00",
+                        "outline": "#8f7066",
+                        "surface-tint": "#a93800",
+                        "on-secondary-container": "#6a4500",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "outline-variant": "#e4beb2",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdbcf",
+                        "primary": "#a53700",
+                        "secondary-fixed-dim": "#ffb94d",
+                        "on-tertiary-container": "#fffcfb",
+                        "surface-bright": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "secondary": "#815500",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#5c5c5c",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#feae20",
+                        "surface-container-low": "#f3f3f3",
+                        "on-background": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#291800",
+                        "inverse-primary": "#ffb59b",
+                        "primary-fixed-dim": "#ffb59b",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e4e2e1",
+                        "tertiary-container": "#757474",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "primary-container": "#ce4600",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "background": "#f9f9f9",
+                        "on-primary-container": "#fffbff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#812900",
+                        "on-surface-variant": "#5b4137",
+                        "surface": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "space-lg": "24px",
+                        "space-sm": "8px",
+                        "space-md": "16px",
+                        "container-margin": "20px",
+                        "gutter": "16px",
+                        "space-xs": "4px",
+                        "space-xl": "32px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pede-gradient {
+            background: linear-gradient(135deg, #a53700 0%, #ce4600 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- Top AppBar (Identity & Global Nav) -->
+<header class="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md shadow-sm fixed top-0 w-full z-50 flex justify-between items-center w-full px-4 py-3 border-b border-neutral-100 dark:border-neutral-800">
+<div class="flex items-center gap-3">
+<button class="active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-orange-600">menu</span>
+</button>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-xl font-black text-orange-600 dark:text-orange-500 uppercase italic">Kamba Delivery</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-orange-100">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a friendly Angolan delivery professional wearing a clean orange branded polo shirt. The lighting is warm and natural, suggesting an outdoor urban setting during golden hour. The image has a modern, crisp aesthetic with a shallow depth of field, focusing on the person's welcoming expression. The color palette emphasizes warm skin tones and vibrant orange fabric." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+</div>
+</header>
+<main class="pt-16 px-container-margin max-w-md mx-auto">
+<!-- Header & Period Selector -->
+<section class="mt-space-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-space-md">Meus Ganhos</h2>
+<div class="flex bg-surface-container rounded-full p-1 gap-1">
+<button class="flex-1 py-2 text-label-lg font-label-lg rounded-full bg-white shadow-sm text-primary">Hoje</button>
+<button class="flex-1 py-2 text-label-lg font-label-lg rounded-full text-tertiary">Semana</button>
+<button class="flex-1 py-2 text-label-lg font-label-lg rounded-full text-tertiary">Mês</button>
+</div>
+</section>
+<!-- Hero Earnings Section -->
+<section class="mt-space-lg">
+<div class="bg-pede-gradient rounded-3xl p-space-lg shadow-xl shadow-primary/20 text-white relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+<span class="text-white/80 font-label-lg block mb-1">Total acumulado</span>
+<div class="flex items-baseline gap-2">
+<h3 class="font-headline-lg text-[40px] font-black leading-none">45.200,00</h3>
+<span class="font-headline-md opacity-90">Kz</span>
+</div>
+<div class="mt-space-md flex items-center gap-2 bg-white/20 w-fit px-3 py-1 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-semibold">+12% vs. ontem</span>
+</div>
+</div>
+</section>
+<!-- Metrics Grid (Asymmetric) -->
+<section class="mt-space-lg grid grid-cols-2 gap-gutter">
+<div class="bg-white border border-surface-container-highest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">delivery_dining</span>
+<span class="text-tertiary font-label-lg text-xs">Pedidos</span>
+</div>
+<p class="font-headline-md text-on-surface">12</p>
+</div>
+<div class="bg-white border border-surface-container-highest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+<span class="text-tertiary font-label-lg text-xs">Gorjetas</span>
+</div>
+<p class="font-headline-md text-on-surface leading-tight">3.500 <span class="text-sm font-medium">Kz</span></p>
+</div>
+<div class="col-span-2 bg-secondary-fixed/30 border border-secondary-container rounded-2xl p-space-md flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">redeem</span>
+</div>
+<div>
+<span class="text-on-secondary-container font-label-lg text-xs block">Bónus de Meta</span>
+<p class="font-headline-md text-on-secondary-container leading-none">5.000 <span class="text-sm">Kz</span></p>
+</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] text-on-secondary-container/60 uppercase font-bold">Progresso</div>
+<div class="w-16 h-1.5 bg-white/50 rounded-full mt-1">
+<div class="w-3/4 h-full bg-secondary rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Weekly Chart Section -->
+<section class="mt-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<h4 class="font-label-lg text-on-surface">Desempenho Semanal</h4>
+<span class="text-xs text-tertiary">Últimos 7 dias</span>
+</div>
+<div class="bg-white border border-surface-container-highest rounded-2xl p-space-md shadow-sm h-48 flex items-end justify-between gap-2 px-4">
+<!-- Simple Bar Chart Visualization -->
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-surface-container-high rounded-t-lg" style="height: 40%"></div>
+<span class="text-[10px] text-tertiary font-bold">S</span>
+</div>
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-surface-container-high rounded-t-lg" style="height: 60%"></div>
+<span class="text-[10px] text-tertiary font-bold">T</span>
+</div>
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-surface-container-high rounded-t-lg" style="height: 55%"></div>
+<span class="text-[10px] text-tertiary font-bold">Q</span>
+</div>
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-surface-container-high rounded-t-lg" style="height: 80%"></div>
+<span class="text-[10px] text-tertiary font-bold">Q</span>
+</div>
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-surface-container-high rounded-t-lg" style="height: 45%"></div>
+<span class="text-[10px] text-tertiary font-bold">S</span>
+</div>
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-primary-container rounded-t-lg" style="height: 95%"></div>
+<span class="text-[10px] text-primary font-black">S</span>
+</div>
+<div class="flex flex-col items-center flex-1 h-full justify-end gap-2">
+<div class="w-full bg-surface-container-high rounded-t-lg" style="height: 30%"></div>
+<span class="text-[10px] text-tertiary font-bold">D</span>
+</div>
+</div>
+</section>
+<!-- Order Breakdown List -->
+<section class="mt-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<h4 class="font-label-lg text-on-surface">Entregas Recentes</h4>
+<button class="text-xs text-primary font-bold">Ver tudo</button>
+</div>
+<div class="space-y-3">
+<!-- Delivery Item 1 -->
+<div class="bg-white p-space-md rounded-2xl border border-surface-container-highest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600">receipt_long</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">#4092</p>
+<span class="text-xs text-tertiary">Hoje • 12:45</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-lg text-on-surface">2.100 Kz</p>
+<span class="text-[10px] px-1.5 py-0.5 bg-green-50 text-green-700 rounded font-bold uppercase">Concluído</span>
+</div>
+</div>
+<!-- Delivery Item 2 -->
+<div class="bg-white p-space-md rounded-2xl border border-surface-container-highest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600">receipt_long</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">#4085</p>
+<span class="text-xs text-tertiary">Hoje • 11:30</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-lg text-on-surface">1.850 Kz</p>
+<span class="text-[10px] px-1.5 py-0.5 bg-green-50 text-green-700 rounded font-bold uppercase">Concluído</span>
+</div>
+</div>
+<!-- Delivery Item 3 -->
+<div class="bg-white p-space-md rounded-2xl border border-surface-container-highest flex items-center justify-between shadow-sm opacity-80">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600">receipt_long</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">#4079</p>
+<span class="text-xs text-tertiary">Hoje • 10:15</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-lg text-on-surface">3.200 Kz</p>
+<span class="text-[10px] px-1.5 py-0.5 bg-green-50 text-green-700 rounded font-bold uppercase">Concluído</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800 rounded-t-[20px] shadow-[0_-4px_12px_rgba(41,41,41,0.08)]">
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 hover:text-orange-500 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="delivery_dining">delivery_dining</span>
+<span class="text-[11px] font-medium font-['Inter']">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-2xl px-4 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-[11px] font-medium font-['Inter']">Ganhos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 hover:text-orange-500 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium font-['Inter']">Mapa</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 hover:text-orange-500 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Perfil</span>
+</a>
+</nav>
+</body></html>

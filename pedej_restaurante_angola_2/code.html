@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kaluanda Gourmet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-high": "#e8e8e8",
+                "primary-fixed": "#ffdbcf",
+                "on-primary-fixed": "#380d00",
+                "surface-variant": "#e2e2e2",
+                "surface-container-lowest": "#ffffff",
+                "on-primary": "#ffffff",
+                "surface-bright": "#f9f9f9",
+                "on-error-container": "#93000a",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#1b1c1c",
+                "surface-container": "#eeeeee",
+                "secondary-fixed": "#ffddb2",
+                "on-primary-fixed-variant": "#812900",
+                "on-secondary-container": "#6a4500",
+                "primary": "#a53700",
+                "on-surface": "#1a1c1c",
+                "secondary": "#815500",
+                "on-secondary-fixed": "#291800",
+                "background": "#f9f9f9",
+                "surface-container-highest": "#e2e2e2",
+                "on-tertiary-container": "#fffcfb",
+                "primary-fixed-dim": "#ffb59b",
+                "on-tertiary-fixed-variant": "#474746",
+                "on-primary-container": "#fffbff",
+                "inverse-primary": "#ffb59b",
+                "surface-tint": "#a93800",
+                "secondary-container": "#feae20",
+                "inverse-on-surface": "#f1f1f1",
+                "tertiary-container": "#757474",
+                "primary-container": "#ce4600",
+                "on-secondary-fixed-variant": "#624000",
+                "tertiary-fixed": "#e4e2e1",
+                "surface-container-low": "#f3f3f3",
+                "on-background": "#1a1c1c",
+                "surface": "#f9f9f9",
+                "outline": "#8f7066",
+                "inverse-surface": "#2f3131",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-surface-variant": "#5b4137",
+                "outline-variant": "#e4beb2",
+                "secondary-fixed-dim": "#ffb94d",
+                "tertiary": "#5c5c5c",
+                "error-container": "#ffdad6",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-secondary": "#ffffff",
+                "surface-dim": "#dadada"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "16px",
+                "space-lg": "24px",
+                "container-margin": "20px",
+                "space-sm": "8px",
+                "space-xs": "4px",
+                "space-xl": "32px",
+                "space-md": "16px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Inter"
+                ],
+                "button": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "label-lg": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "button": [
+                        "16px",
+                        {
+                                "lineHeight": "1",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body { background-color: #f9f9f9; }
+</style>
+</head>
+<body class="font-body-md text-on-surface pb-32">
+<!-- Top Navigation for Sub-page (Transactional/Task focused) -->
+<div class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-surface-variant h-16 flex items-center justify-between px-5">
+<button class="p-2 -ml-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-on-surface">share</span>
+</button>
+</div>
+</div>
+<!-- Hero Image Section -->
+<div class="w-full h-64 mt-16 relative bg-surface-container">
+<img alt="Angolan traditional dish with grilled fish and sides" class="w-full h-full object-cover" data-alt="A high-quality, appetizing close-up photograph of a traditional Angolan dish, likely Mufete. The scene features a perfectly grilled fish, sweet potatoes, beans with palm oil, and farofa, beautifully arranged on a rustic ceramic plate. The lighting is warm and natural, emphasizing the rich textures and vibrant colors of the food against a dark, moody background. The overall style is modern culinary photography, designed to stimulate the appetite within a high-contrast corporate UI environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAugpwlrxgPTmb8WDvByahNFR9sFfFmxbLwGZ-HAK3yVPkT3jPXJQ-1T2OV_HBY2I1FOmID5jnOddYjx5zRd0O82eISQsNbZzYX3GfzQnuQaQVlaqCugvUG7SK82OJ9q-Zu1YtLk_wZtkvdKA5p2ipQdMOIhAbRCVDakAsYqptoJ2syI0jAZH_2MB_VVuFGShh-nywj5yFHaP1ai9rAd6tK9cAMXrUFYORM25DPUQau0GykUSlxHq_TRyun75Nft-aMF77e0emTdb8"/>
+</div>
+<!-- Restaurant Info -->
+<div class="px-container-margin py-space-lg bg-surface-container-lowest -mt-4 rounded-t-3xl relative z-10 shadow-sm">
+<h1 class="font-headline-lg text-headline-lg mb-2">Kaluanda Gourmet</h1>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary-container text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.8</span>
+<span class="text-on-surface-variant font-body-md text-sm">(500+)</span>
+<span class="text-outline-variant mx-1">•</span>
+<span class="font-body-md text-on-surface-variant text-sm">Angolana • Grelhados</span>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-xl mb-4">
+<div class="flex flex-col items-center flex-1">
+<span class="material-symbols-outlined text-primary mb-1">schedule</span>
+<span class="font-label-lg text-label-lg">30-45 min</span>
+</div>
+<div class="w-px bg-surface-variant"></div>
+<div class="flex flex-col items-center flex-1">
+<span class="material-symbols-outlined text-primary mb-1">local_shipping</span>
+<span class="font-label-lg text-label-lg">Kz 500</span>
+</div>
+</div>
+<!-- Menu Tabs -->
+<div class="flex border-b border-surface-variant mt-space-md">
+<button class="flex-1 pb-3 text-primary border-b-2 border-primary font-label-lg text-label-lg">Menu</button>
+<button class="flex-1 pb-3 text-on-surface-variant border-b-2 border-transparent font-label-lg text-label-lg hover:text-on-surface transition-colors">Avaliações</button>
+<button class="flex-1 pb-3 text-on-surface-variant border-b-2 border-transparent font-label-lg text-label-lg hover:text-on-surface transition-colors">Info</button>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="max-w-screen-xl mx-auto px-container-margin py-space-lg grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Menu Items Column -->
+<div class="md:col-span-8 space-y-space-xl">
+<!-- Destaques Section -->
+<section>
+<h2 class="font-headline-md text-headline-md mb-space-md">Destaques</h2>
+<div class="bg-surface-container-lowest rounded-[16px] shadow-sm overflow-hidden border border-surface-variant cursor-pointer hover:shadow-md transition-shadow">
+<img alt="Mufete Especial dish" class="w-full h-48 object-cover" data-alt="A mouth-watering, top-down view of a Mufete Especial. A large, perfectly grilled cacuso fish is the centerpiece, surrounded by vibrant side dishes in small white bowls: sweet potatoes, plantains, beans in rich palm oil, and a dusting of farofa. The lighting is bright and directional, highlighting the charred grill marks on the fish and the glossy finish of the palm oil. The composition is clean and modern, fitting seamlessly into a high-energy, fast-paced food delivery app interface." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-label-lg text-label-lg text-on-surface text-lg">Mufete Especial</h3>
+<span class="font-label-lg text-label-lg text-on-surface">Kz 8.500</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-3">O clássico luandense completo. Peixe cacuso fresco grelhado na brasa, acompanhado de feijão de óleo de palma, batata doce, banana pão, mandioca e farofa.</p>
+<button class="w-full py-2 bg-primary text-on-primary rounded-full font-button text-button hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span> Adicionar
+                        </button>
+</div>
+</div>
+</section>
+<!-- Pratos Principais Section -->
+<section>
+<h2 class="font-headline-md text-headline-md mb-space-md">Pratos Principais</h2>
+<div class="space-y-space-md">
+<!-- Item 1 -->
+<div class="flex bg-surface-container-lowest rounded-[16px] p-4 shadow-sm border border-surface-variant cursor-pointer hover:bg-surface-bright transition-colors">
+<div class="flex-1 pr-4">
+<h3 class="font-label-lg text-label-lg text-on-surface mb-1">Calulu de Peixe</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2 mb-2">Tradicional calulu feito com peixe fresco e seco, quiabos, folhas de batata doce e óleo de palma. Servido com funge.</p>
+<span class="font-label-lg text-label-lg text-on-surface">Kz 6.200</span>
+</div>
+<div class="w-24 h-24 shrink-0 rounded-xl overflow-hidden relative">
+<img alt="Calulu de Peixe" class="w-full h-full object-cover" data-alt="A close-up shot of traditional Angolan Calulu de Peixe. The stew is rich and thick, featuring chunks of fresh and dried fish, vibrant green okra, and sweet potato leaves, all coated in a distinct reddish-orange palm oil sauce. It is presented in a modern, shallow ceramic bowl resting on a clean, light surface. The lighting is soft but vibrant, emphasizing the rich, savory nature of the dish to appeal to a hungry, urban audience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQvDtPenK97rft1GilIlNWgbDj9r-69MoKgJ6d7W_Y81dmfadWqfe721Lz2qG8cF3SlEx1tx8eAnGY4IeoO7kLoJUz71C5RD18Kcl2ro2muv7bytQsgsH6jqCgTzPo1FEKCb19pXcyeDlADl2IJGWxSycPM1PiI4T1UmCMoopbI3g-zFVuv_tCpHFpqtiTToDKmBQjQuJ0EOswixQDhILzBCvELp0E1J8R6HRgPS_rJNrRBiMUfR9jd_GBKbUjJUvFg_Lj9vEW8qY"/>
+<button class="absolute bottom-1 right-1 bg-white p-1 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-sm block">add</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex bg-surface-container-lowest rounded-[16px] p-4 shadow-sm border border-surface-variant cursor-pointer hover:bg-surface-bright transition-colors">
+<div class="flex-1 pr-4">
+<h3 class="font-label-lg text-label-lg text-on-surface mb-1">Galinha de Muamba</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2 mb-2">Pedaços suculentos de galinha rija estufados em molho rico de dendém (muamba), com quiabos e gindungo. Servido com funge de bombó.</p>
+<span class="font-label-lg text-label-lg text-on-surface">Kz 5.800</span>
+</div>
+<div class="w-24 h-24 shrink-0 rounded-xl overflow-hidden relative">
+<img alt="Galinha de Muamba" class="w-full h-full object-cover" data-alt="A comforting bowl of Galinha de Muamba. Tender pieces of chicken are submerged in a thick, vibrant orange palm nut sauce, studded with green okra pods. A side of smooth, white funge sits adjacent. The composition is tight, focusing on the hearty, craving-inducing textures of the stew. The lighting highlights the glossy sauce and the savory appeal of the dish, fitting the modern, high-contrast aesthetic of the delivery app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvFDx3ZVDHNSfp9vpbEHrj71BD0aYgHY9G_VE1H8jfdoaQT1meHZPkHAiIsTcJbYK6eCmbrfWUTChlRrwCLDE6zco-cWcdcfW2Ap-KDIMoTw5tgxqjaMMmZK6dxEopQ1ng6PaCEhzQnNt4EvAnrdjODavDMwfA27_Uzi-ABF71eojRafYDLd4-2GmnEnuLTB-LyWy1DQQdShAyNgw-gPU1Ezauo8STM6uw3l1q26xVM4bKn4G3INPq45Sw_gi_WWKHtgvKPPqU5iI"/>
+<button class="absolute bottom-1 right-1 bg-white p-1 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-sm block">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Spacer for desktop layout -->
+<div class="hidden md:block md:col-span-4">
+<!-- Placeholder for cart or additional info on desktop if needed -->
+</div>
+</div>
+<!-- Sticky Bottom Cart Button (Surface Level 2) -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-white/90 backdrop-blur-md border-t border-surface-variant z-50 pb-safe shadow-[0_-8px_20px_rgba(41,41,41,0.1)]">
+<div class="max-w-screen-md mx-auto">
+<button class="w-full bg-primary text-on-primary rounded-full py-4 px-6 flex items-center justify-between font-button text-button hover:bg-primary-container transition-all active:scale-95 shadow-lg">
+<div class="flex items-center gap-3">
+<div class="bg-white/20 px-3 py-1 rounded-full text-sm">2</div>
+<span>Ver sacola</span>
+</div>
+<span>Kz 14.700</span>
+</button>
+</div>
+</div>
+</body></html>

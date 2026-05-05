@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="pt-AO"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-primary-fixed-variant": "#812900",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-error-container": "#93000a",
+                    "background": "#f9f9f9",
+                    "secondary": "#815500",
+                    "inverse-primary": "#ffb59b",
+                    "on-surface-variant": "#5b4137",
+                    "primary": "#a53700",
+                    "on-secondary-container": "#6a4500",
+                    "secondary-fixed-dim": "#ffb94d",
+                    "on-surface": "#1a1c1c",
+                    "primary-fixed": "#ffdbcf",
+                    "primary-container": "#ce4600",
+                    "secondary-fixed": "#ffddb2",
+                    "surface-container": "#eeeeee",
+                    "tertiary-container": "#757474",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-fixed-variant": "#624000",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed": "#291800",
+                    "outline-variant": "#e4beb2",
+                    "surface": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffcfb",
+                    "secondary-container": "#feae20",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-variant": "#e2e2e2",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#ffb59b",
+                    "surface-tint": "#a93800",
+                    "on-primary-fixed": "#380d00",
+                    "outline": "#8f7066",
+                    "tertiary": "#5c5c5c",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "space-sm": "8px",
+                    "container-margin": "20px",
+                    "space-xl": "32px",
+                    "space-md": "16px",
+                    "space-xs": "4px",
+                    "space-lg": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "button": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pedeja-orange { background-color: #F95A0D; }
+        .text-pedeja-orange { color: #F95A0D; }
+        .active-nav-glow { box-shadow: 0 0 15px rgba(249, 90, 13, 0.2); }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md shadow-sm border-b border-neutral-100 dark:border-neutral-800 flex justify-between items-center px-4 py-3">
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-orange-600 active:scale-95 transition-transform duration-150" data-icon="menu">menu</button>
+<h1 class="text-xl font-black text-orange-600 dark:text-orange-500 uppercase italic font-['Inter'] tracking-tight">Kaluanda Gourmet</h1>
+</div>
+<div class="relative">
+<img alt="Profile" class="w-10 h-10 rounded-full border-2 border-orange-100 object-cover" data-alt="A professional close-up photograph of a smiling Angolan chef in a pristine white uniform, standing in a bright, high-end modern kitchen. The lighting is warm and inviting, highlighting the chef's friendly expression and the sleek, stainless steel appliances in the background. The overall aesthetic is clean, premium, and reliable, perfectly capturing the high-energy and crave-worthy brand identity of a top-tier delivery service." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+</header>
+<main class="pt-20 pb-28 px-container-margin max-w-7xl mx-auto">
+<!-- Hero Summary Section - Bento Grid Style -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Ganhos de Hoje -->
+<div class="bg-white dark:bg-neutral-900 p-space-lg rounded-xl border border-neutral-100 shadow-[0_4px_12px_rgba(41,41,41,0.05)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="payments">payments</span>
+</div>
+<p class="text-neutral-500 font-label-lg mb-1">Ganhos de Hoje</p>
+<div class="flex items-baseline gap-1">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">145.200</h2>
+<span class="font-bold text-orange-600">Kz</span>
+</div>
+<div class="mt-4 flex items-center gap-1 text-green-600 text-sm font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span>+12% vs. ontem</span>
+</div>
+</div>
+<!-- Pedidos Ativos -->
+<div class="bg-pedeja-orange p-space-lg rounded-xl shadow-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-30 transition-opacity text-white">
+<span class="material-symbols-outlined text-6xl" data-icon="delivery_dining">delivery_dining</span>
+</div>
+<p class="text-white/80 font-label-lg mb-1">Pedidos Ativos</p>
+<h2 class="text-headline-lg font-headline-lg text-white">08</h2>
+<div class="mt-4 flex items-center gap-1 text-white/90 text-sm font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span>Tempo médio 24 min</span>
+</div>
+</div>
+<!-- Avaliação -->
+<div class="bg-white dark:bg-neutral-900 p-space-lg rounded-xl border border-neutral-100 shadow-[0_4px_12px_rgba(41,41,41,0.05)]">
+<p class="text-neutral-500 font-label-lg mb-1">Avaliação</p>
+<div class="flex items-center gap-2">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">4.8</h2>
+<div class="flex text-orange-400">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star_half">star_half</span>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-1 text-neutral-400 text-sm font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+<span>12 novas avaliações</span>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="flex flex-col lg:flex-row gap-space-lg">
+<!-- Pedidos Recentes List -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-space-md">
+<h3 class="text-headline-md font-headline-md text-on-surface">Pedidos Recentes</h3>
+<button class="text-orange-600 font-label-lg hover:underline transition-all">Ver todos</button>
+</div>
+<div class="space-y-4">
+<!-- Pedido item: Novo -->
+<div class="bg-white dark:bg-neutral-900 p-space-md rounded-xl border-l-4 border-l-blue-500 shadow-sm flex items-center justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">#9842 - João M.</h4>
+<p class="text-sm text-neutral-500">Mousse de Maracujá (2x) • 3.200 Kz</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase">Novo</span>
+<span class="text-xs text-neutral-400">Há 2 min</span>
+</div>
+</div>
+<!-- Pedido item: Em Preparo -->
+<div class="bg-white dark:bg-neutral-900 p-space-md rounded-xl border-l-4 border-l-orange-500 shadow-sm flex items-center justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="chef_hat">outdoor_grill</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">#9840 - Sandra B.</h4>
+<p class="text-sm text-neutral-500">Combo Burguer Kaluanda • 7.500 Kz</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full uppercase">Em Preparo</span>
+<span class="text-xs text-neutral-400">Há 15 min</span>
+</div>
+</div>
+<!-- Pedido item: Pronto -->
+<div class="bg-white dark:bg-neutral-900 p-space-md rounded-xl border-l-4 border-l-green-500 shadow-sm flex items-center justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">#9838 - Carlos T.</h4>
+<p class="text-sm text-neutral-500">Arroz de Marisco Especial • 12.000 Kz</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full uppercase">Pronto</span>
+<span class="text-xs text-neutral-400">Há 22 min</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Stats/Actions Sidebar -->
+<aside class="w-full lg:w-80 space-y-space-lg">
+<div class="bg-white dark:bg-neutral-900 p-space-md rounded-xl shadow-sm border border-neutral-100">
+<h4 class="font-headline-md text-sm mb-4">Ações Rápidas</h4>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center p-4 bg-orange-50 text-orange-600 rounded-xl hover:bg-orange-100 transition-colors">
+<span class="material-symbols-outlined mb-2" data-icon="add_circle">add_circle</span>
+<span class="text-[12px] font-bold">Novo Item</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-neutral-50 text-neutral-700 rounded-xl hover:bg-neutral-100 transition-colors">
+<span class="material-symbols-outlined mb-2" data-icon="history">history</span>
+<span class="text-[12px] font-bold">Histórico</span>
+</button>
+</div>
+</div>
+<!-- Featured Card for Menu or Promo -->
+<div class="rounded-xl overflow-hidden relative h-48 group shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img alt="Menu Highlight" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vivid, appetizing top-down view of a traditional Angolan dish, featuring perfectly grilled seafood and vibrant side vegetables, arranged on a rustic ceramic plate. The image uses warm, saturated colors and dramatic overhead lighting to emphasize the textures and freshness of the meal. The high-contrast visual style is designed to stimulate appetite and movement, aligning with the PedeJá energetic brand persona." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+<div class="absolute bottom-0 left-0 p-4 z-20 text-white">
+<span class="bg-yellow-400 text-black text-[10px] font-black px-2 py-1 rounded mb-2 inline-block uppercase">Destaque do Mês</span>
+<h5 class="font-bold text-lg leading-tight">Melhore seu cardápio com fotos pro!</h5>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800 shadow-[0_-4px_12px_rgba(41,41,41,0.08)] rounded-t-[20px]">
+<!-- Início (Active) -->
+<a class="flex flex-col items-center justify-center bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-2xl px-4 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[11px] font-medium font-['Inter']">Início</span>
+</a>
+<!-- Pedidos -->
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 active:scale-90 transition-transform hover:text-orange-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="delivery_dining">delivery_dining</span>
+<span class="text-[11px] font-medium font-['Inter']">Pedidos</span>
+</a>
+<!-- Cardápio -->
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 active:scale-90 transition-transform hover:text-orange-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-[11px] font-medium font-['Inter']">Cardápio</span>
+</a>
+<!-- Perfil -->
+<a class="flex flex-col items-center justify-center text-neutral-500 dark:text-neutral-400 px-4 py-1.5 active:scale-90 transition-transform hover:text-orange-500 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Perfil</span>
+</a>
+</nav>
+<!-- Floating Action Button for Emergency/Urgent Status -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-pedeja-orange text-white rounded-full flex items-center justify-center shadow-xl z-40 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="add" style="font-variation-settings: 'wght' 700;">add</span>
+</button>
+</body></html>

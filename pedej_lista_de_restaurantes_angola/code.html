@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PedeJá - Restaurantes em Luanda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "tertiary": "#5c5c5c",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "surface-bright": "#f9f9f9",
+                      "secondary-container": "#feae20",
+                      "secondary": "#815500",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "on-tertiary-container": "#fffcfb",
+                      "on-primary-container": "#fffbff",
+                      "surface": "#f9f9f9",
+                      "background": "#f9f9f9",
+                      "primary": "#a53700",
+                      "on-secondary-container": "#6a4500",
+                      "on-primary-fixed-variant": "#812900",
+                      "error": "#ba1a1a",
+                      "primary-container": "#ce4600",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#e4e2e1",
+                      "surface-dim": "#dadada",
+                      "on-surface-variant": "#5b4137",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#757474",
+                      "surface-tint": "#a93800",
+                      "surface-variant": "#e2e2e2",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed-variant": "#624000",
+                      "inverse-primary": "#ffb59b",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#ffddb2",
+                      "on-surface": "#1a1c1c",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-container-highest": "#e2e2e2",
+                      "outline-variant": "#e4beb2",
+                      "inverse-on-surface": "#f1f1f1",
+                      "primary-fixed": "#ffdbcf",
+                      "surface-container": "#eeeeee",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#380d00",
+                      "secondary-fixed-dim": "#ffb94d",
+                      "on-secondary-fixed": "#291800",
+                      "on-background": "#1a1c1c",
+                      "primary-fixed-dim": "#ffb59b",
+                      "outline": "#8f7066"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1rem"
+              },
+              "spacing": {
+                      "space-xs": "4px",
+                      "space-md": "16px",
+                      "space-lg": "24px",
+                      "container-margin": "20px",
+                      "space-sm": "8px",
+                      "gutter": "16px",
+                      "space-xl": "32px",
+                      "safe": "env(safe-area-inset-bottom)"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Fallback for safe-area if not supported */
+        @supports not (padding-bottom: env(safe-area-inset-bottom)) {
+            .pb-safe { padding-bottom: 16px; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest/90 backdrop-blur-md shadow-sm border-b border-surface-container flex justify-between items-center h-14 px-4 w-full docked full-width top-0 sticky z-50">
+<div class="flex items-center gap-space-sm hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Luanda</span>
+<span class="font-body-md text-[12px] leading-tight text-on-surface-variant flex items-center">
+                    Angola <span class="material-symbols-outlined text-[14px]">expand_more</span>
+</span>
+</div>
+</div>
+<div class="text-2xl font-black tracking-tighter text-primary">DelivEat</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A close up portrait photo of a young urban professional looking directly at the camera with a friendly smile. The lighting is soft and flattering, highlighting a clean, modern aesthetic suitable for a high-end delivery app profile picture. The background is a slightly blurred, warm-toned neutral color that complements the vibrant orange and clean white UI style of the app." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+</header>
+<main class="max-w-screen-md mx-auto">
+<!-- Search Bar -->
+<section class="px-container-margin pt-space-lg pb-space-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant">search</span>
+<input class="w-full h-12 pl-12 pr-4 rounded-xl border border-surface-variant bg-surface-container-lowest font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-sm" placeholder="Pesquisar restaurantes ou cozinhas..." type="text"/>
+</div>
+</section>
+<!-- Categories / Filters (Optional Enhancement for 'Vibrant Delivery' feel) -->
+<section class="px-container-margin py-space-sm overflow-x-auto no-scrollbar flex gap-space-sm pb-space-md">
+<button class="flex-none px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg shadow-sm whitespace-nowrap active:scale-95 transition-transform">Tudo</button>
+<button class="flex-none px-4 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg whitespace-nowrap hover:bg-surface-container active:scale-95 transition-transform">Angolana</button>
+<button class="flex-none px-4 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg whitespace-nowrap hover:bg-surface-container active:scale-95 transition-transform">Churrasco</button>
+<button class="flex-none px-4 py-2 rounded-full border border-surface-variant bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg whitespace-nowrap hover:bg-surface-container active:scale-95 transition-transform">Pizzas</button>
+</section>
+<!-- Restaurant List -->
+<section class="px-container-margin flex flex-col gap-space-lg pt-space-sm">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_20px_rgba(41,41,41,0.05)] overflow-hidden border border-surface-container transition-transform hover:-translate-y-1 duration-200 cursor-pointer">
+<div class="relative w-full aspect-video bg-surface-container-high">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none"></div>
+<img alt="Kaluanda Gourmet Food" class="w-full h-full object-cover" data-alt="A mouth-watering, high-quality food photography shot of a traditional Angolan dish, possibly Muamba de Galinha, served in an elegant, modern ceramic bowl. The lighting is warm and inviting, emphasizing the rich, vibrant colors of the food. The background is slightly out of focus, suggesting a stylish, contemporary restaurant setting with subtle orange and warm tone accents that fit perfectly within a premium food delivery app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD29ySLHc2jIwn_naQOgHL494fkTu2-3ZIVGwmkOjfICvXjlenhak3u7meO8WKfo2c3Ly8xF7X-WcHOE6XmpfVsAJ_cYP4xH8W36mZiZ9DWXvbrW2Lol7NdUMjyTMpgMdZiJh61Qv0JNpl7b-48jBvZVUIHQ1vGXmWXCEs9zWqyPYU4KY03bLrhIw_jXg0hjh5GsoF47ztuT-6Mn2AB1QKtiiDBKxryr1M8uS80Rh4N5J8Ty5KSANhqvR069tBQ1lljtEKLMX_YAEg"/>
+<button class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 z-20 flex gap-2">
+<span class="px-2 py-1 bg-surface-container-lowest rounded-lg font-label-lg text-[12px] text-on-surface shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                        </span>
+</div>
+</div>
+<div class="p-space-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-[20px] leading-tight text-on-surface truncate pr-2">Kaluanda Gourmet</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-3">Angolana • Continetal</p>
+<div class="flex items-center gap-4 text-on-surface-variant font-body-md text-[14px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>30-40 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">delivery_dining</span>
+<span>Kz 500</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_20px_rgba(41,41,41,0.05)] overflow-hidden border border-surface-container transition-transform hover:-translate-y-1 duration-200 cursor-pointer">
+<div class="relative w-full aspect-video bg-surface-container-high">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none"></div>
+<img alt="Churrascaria da Ilha Food" class="w-full h-full object-cover" data-alt="A close-up, appetizing photograph of perfectly grilled churrasco meats, steaming slightly, served on a rustic wooden board with fresh garnishes. The lighting is dynamic, creating appetizing highlights and deep shadows that emphasize texture. The scene implies a vibrant, energetic dining experience in Luanda, perfectly styled to stimulate appetite within a clean, modern, light-themed mobile delivery application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ecgGMPOdqNZ-ITAis7k1Y-I5MbyRTcB0C3Kx0hwv0XnTJFXCAmws9IbZlwJjAXf-X83c2q-Us0uQJmQI2hEl5CCCSf7pNvLGTRFU0RlgFBBUBUhC7FOFuLBkLrx8oysET-FM-znOeeiP0_Cj-VQZitkOBiXkVln_5-vzEXXusGFT9AkwttzTNi9hct3EJ45Nfx-DmxScL2u0ESgKEiF_V1H8mxRYUvcOMbZTZ8y-SP-p_z5gb9RWZcXgS6XjgqL1RFs9FdjvvxU"/>
+<button class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 z-20 flex gap-2">
+<span class="px-2 py-1 bg-surface-container-lowest rounded-lg font-label-lg text-[12px] text-on-surface shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.5
+                        </span>
+</div>
+</div>
+<div class="p-space-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-[20px] leading-tight text-on-surface truncate pr-2">Churrascaria da Ilha</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-3">Churrasco • Grelhados</p>
+<div class="flex items-center gap-4 text-on-surface-variant font-body-md text-[14px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>45-60 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">delivery_dining</span>
+<span class="text-primary font-medium">Grátis</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_20px_rgba(41,41,41,0.05)] overflow-hidden border border-surface-container transition-transform hover:-translate-y-1 duration-200 cursor-pointer">
+<div class="relative w-full aspect-video bg-surface-container-high">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none"></div>
+<img alt="Pizzaria Mutamba Food" class="w-full h-full object-cover" data-alt="A top-down, high-contrast shot of a delicious artisanal pizza fresh out of a wood-fired oven, featuring bubbling cheese, vibrant red tomato sauce, and fresh green basil leaves. The composition is clean and modern, resting on a stark white or light neutral surface. The bright, high-key lighting enhances the vibrant orange and red tones of the food, perfectly matching the energetic, 'crave-worthy' brand identity of the app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAC13EgWJVo-orM9sBTjkfMNsdTpF4cRBA8UaR6X4Wn8ihjKUS6XiKCdC6fLUPmJasDUEtQRZDZetdP2inrzkkJpgS80Esqa1jwH_jwDq09KkGAgemnV-LB9O6cc1FhZ7KqbLnkUaU6XEhd7YZqr3eOmCiVVwOd9ZMtXf0loM3OCEyqKRaIYg_UUMT29JnFUr5210LljW8M5Q62wxRtKyCBDMO9AdmDyhWXJEBQEFkwaY_amfcNtW75u1qfaYO-C0K-7mWlTnF3QU"/>
+<button class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-90">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 z-20 flex gap-2">
+<span class="px-2 py-1 bg-surface-container-lowest rounded-lg font-label-lg text-[12px] text-on-surface shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-container text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.7
+                        </span>
+</div>
+</div>
+<div class="p-space-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-[20px] leading-tight text-on-surface truncate pr-2">Pizzaria Mutamba</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-3">Pizzas • Italiana</p>
+<div class="flex items-center gap-4 text-on-surface-variant font-body-md text-[14px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>25-35 min</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">delivery_dining</span>
+<span>Kz 300</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container-lowest border-t border-surface-container shadow-[0_-4px_10px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full h-16 flex justify-around items-center px-2 pb-safe z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-primary font-semibold hover:bg-surface-container-low rounded-xl transition-all active:scale-90 duration-150 ease-out p-2 flex-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-lg text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all active:scale-90 duration-150 ease-out p-2 flex-1" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-label-lg text-[11px] font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all active:scale-90 duration-150 ease-out p-2 flex-1" href="#">
+<span class="material-symbols-outlined mb-1">receipt_long</span>
+<span class="font-label-lg text-[11px] font-medium">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all active:scale-90 duration-150 ease-out p-2 flex-1" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-lg text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

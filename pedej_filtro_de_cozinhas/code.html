@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cuisine Selection Modal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "outline-variant": "#e4beb2",
+                        "on-secondary-fixed": "#291800",
+                        "primary-fixed": "#ffdbcf",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-container": "#fffcfb",
+                        "tertiary-fixed": "#e4e2e1",
+                        "surface-tint": "#a93800",
+                        "primary": "#a53700",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#812900",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "outline": "#8f7066",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#5c5c5c",
+                        "secondary-fixed-dim": "#ffb94d",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#380d00",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#5b4137",
+                        "on-secondary-container": "#6a4500",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#815500",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "secondary-fixed": "#ffddb2",
+                        "primary-container": "#ce4600",
+                        "on-primary-container": "#fffbff",
+                        "secondary-container": "#feae20",
+                        "inverse-primary": "#ffb59b",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb59b",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#624000",
+                        "tertiary-container": "#757474"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "space-xs": "4px",
+                        "space-sm": "8px",
+                        "space-md": "16px",
+                        "space-lg": "24px",
+                        "container-margin": "20px",
+                        "gutter": "16px",
+                        "space-xl": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "button": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dadada;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface-dim h-screen w-full relative overflow-hidden flex flex-col font-headline-md text-on-surface">
+<!-- Simulated background context -->
+<div class="absolute inset-0 z-0 opacity-40 blur-sm flex flex-col pointer-events-none">
+<!-- TopAppBar Placeholder -->
+<div class="flex justify-between items-center h-14 px-4 w-full bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+<div class="flex items-center gap-2 text-primary font-headline-md">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<div class="text-2xl font-black tracking-tighter text-primary">DelivEat</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="p-container-margin grid grid-cols-2 gap-gutter flex-1 mt-space-lg">
+<div class="bg-white rounded-xl shadow-sm h-32"></div>
+<div class="bg-white rounded-xl shadow-sm h-32"></div>
+<div class="bg-white rounded-xl shadow-sm h-32 col-span-2"></div>
+</div>
+</div>
+<!-- Modal Backdrop -->
+<div class="absolute inset-0 bg-on-background/50 z-40 transition-opacity duration-300"></div>
+<!-- Bottom Sheet Modal -->
+<div class="absolute bottom-0 left-0 w-full bg-surface-container-lowest rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.12)] z-50 flex flex-col max-h-[85vh] transform transition-transform duration-300 ease-out translate-y-0">
+<!-- Drag Handle indicator -->
+<div class="w-full flex justify-center pt-space-sm pb-space-xs">
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full"></div>
+</div>
+<!-- Header -->
+<div class="flex items-center justify-between px-container-margin py-space-sm border-b border-surface-container">
+<button class="text-primary font-button text-button hover:opacity-80 transition-opacity">Cancelar</button>
+<h2 class="font-headline-md text-headline-md text-on-surface text-center flex-1">Cozinhas</h2>
+<button class="text-on-surface-variant hover:bg-surface-container-low rounded-full p-1 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-container-margin py-space-md space-y-space-sm">
+<!-- Cuisine Item: Angolana (Active state) -->
+<button class="w-full flex items-center justify-between p-space-sm bg-primary-fixed rounded-xl border border-primary transition-all duration-200 group">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary shadow-sm bg-surface-container">
+<img alt="Angolan Cuisine" class="w-full h-full object-cover" data-alt="A vibrant top-down food photography shot of traditional Angolan cuisine, featuring a rich, dark stew in a rustic bowl accompanied by fluffy funge and grilled meat. The scene is brightly lit with warm, appetizing light mode aesthetics, set against a clean, modern white background to highlight the rich orange and deep brown tones of the food. The composition is clean and crave-worthy, emphasizing fresh ingredients and cultural authenticity." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<span class="font-label-lg text-label-lg text-on-primary-fixed font-bold">Angolana</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[16px]" data-icon="check" data-weight="fill">check</span>
+</div>
+</button>
+<!-- Cuisine Item: Mufete -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container-lowest hover:bg-surface-container-low rounded-xl border border-surface-container transition-all duration-200 group">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-surface-container bg-surface-container">
+<img alt="Mufete" class="w-full h-full object-cover" data-alt="A close-up, high-quality photograph of Mufete, a classic Angolan fish dish, beautifully plated with grilled tilapia, sweet potatoes, plantains, and beans. The lighting is bright and warm, reflecting a fresh, modern light-mode design. The colors pop, particularly the bright oranges of palm oil and fresh green garnishes against a crisp, neutral surface, ensuring the food looks highly appetizing and energetic." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Mufete</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-high group-hover:border-primary-fixed-dim transition-colors"></div>
+</button>
+<!-- Cuisine Item: Pizzas -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container-lowest hover:bg-surface-container-low rounded-xl border border-surface-container transition-all duration-200 group">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-surface-container bg-surface-container">
+<img alt="Pizzas" class="w-full h-full object-cover" data-alt="A macro shot of a delicious, freshly baked pizza slice with melted cheese stretching, vibrant red tomato sauce, and slightly charred crust edges. The image is styled for a modern food delivery app with a bright, clean, light-mode background that contrasts with the rich orange and red hues of the pizza. The lighting is soft but vibrant, emphasizing texture and a high-energy, crave-worthy appeal." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Pizzas</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-high group-hover:border-primary-fixed-dim transition-colors"></div>
+</button>
+<!-- Cuisine Item: Burgers -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container-lowest hover:bg-surface-container-low rounded-xl border border-surface-container transition-all duration-200 group">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-surface-container bg-surface-container">
+<img alt="Burgers" class="w-full h-full object-cover" data-alt="A mouth-watering, high-contrast studio shot of a tall, juicy double cheeseburger with glossy buns, crisp lettuce, and bright red tomatoes. The background is a clean, bright neutral surface to fit a high-end, light-mode UI design. Warm, directional lighting enhances the glossy textures and golden-brown tones, making the burger look incredibly irresistible and energetic." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Burgers</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-high group-hover:border-primary-fixed-dim transition-colors"></div>
+</button>
+<!-- Cuisine Item: Japonesa -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container-lowest hover:bg-surface-container-low rounded-xl border border-surface-container transition-all duration-200 group">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-surface-container bg-surface-container">
+<img alt="Japanese Cuisine" class="w-full h-full object-cover" data-alt="An elegant, minimalist food photography shot featuring a vibrant platter of fresh sushi rolls and sashimi, showcasing bright orange salmon and crisp green cucumber. The scene is brightly lit with a clean, light-mode aesthetic against a white or very soft grey background. The focus is sharp on the textures of the fish and rice, conveying freshness, precision, and modern premium quality." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Japonesa</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-high group-hover:border-primary-fixed-dim transition-colors"></div>
+</button>
+<!-- Cuisine Item: Brasileira -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container-lowest hover:bg-surface-container-low rounded-xl border border-surface-container transition-all duration-200 group">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-surface-container bg-surface-container">
+<img alt="Brazilian Cuisine" class="w-full h-full object-cover" data-alt="A rich and appetizing photo of traditional Brazilian Feijoada served in a black clay pot with side dishes of farofa, orange slices, and vivid green collard greens. The image utilizes a bright, clean light-mode setting with soft, even lighting to make the contrasting colors pop. The overall aesthetic is warm, inviting, and highly saturated to stimulate appetite within a modern UI layout." src="https://lh3.googleusercontent.com/aida/ADBb0uir44oUCeT7elOFei4rt65Z1HGaOuioG6ZGsWXWtbBpt7OU53aHBO81zBTVFTzNoWz3hNckMWu4ZO_dwt7a4pes0RHVD3JgGBAolpcHqczejtGi6aJ3nlnrQwWWygBmeEtUweEoRuS2-eUCkzJ2lCMTgcEQxicOeGgv4CSWvT_HpixMM8a3QF5LKpZPEyiYa9nNIMAWeLBgecZZxe7YPF35rp-YgdSV6LLHkzQvASZ_brYBAjALSREKg1vpuslmqeUFMk_T2ZmqHQ"/>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Brasileira</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container-high group-hover:border-primary-fixed-dim transition-colors"></div>
+</button>
+</div>
+<!-- Footer / Action Area -->
+<div class="p-container-margin border-t border-surface-container bg-surface-container-lowest pb-safe">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-button text-button py-4 rounded-full shadow-[0_4px_12px_rgba(165,55,0,0.3)] transition-all active:scale-95 duration-200 flex items-center justify-center gap-2">
+<span>Aplicar Filtros</span>
+<span class="material-symbols-outlined text-lg" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</body></html>

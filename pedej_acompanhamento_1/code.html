@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PedeJá Order Tracking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-fixed-variant": "#812900",
+                "surface-container-highest": "#e2e2e2",
+                "on-primary": "#ffffff",
+                "surface-container": "#eeeeee",
+                "surface-variant": "#e2e2e2",
+                "outline": "#8f7066",
+                "surface-container-lowest": "#ffffff",
+                "tertiary": "#5c5c5c",
+                "secondary-fixed-dim": "#ffb94d",
+                "surface-bright": "#f9f9f9",
+                "outline-variant": "#e4beb2",
+                "on-secondary-fixed": "#291800",
+                "primary-fixed": "#ffdbcf",
+                "surface-dim": "#dadada",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "surface-container-low": "#f3f3f3",
+                "on-tertiary-container": "#fffcfb",
+                "tertiary-fixed": "#e4e2e1",
+                "surface-tint": "#a93800",
+                "primary": "#a53700",
+                "on-secondary": "#ffffff",
+                "on-primary-container": "#fffbff",
+                "inverse-primary": "#ffb59b",
+                "secondary-container": "#feae20",
+                "surface": "#f9f9f9",
+                "on-tertiary-fixed-variant": "#474746",
+                "on-error": "#ffffff",
+                "on-surface": "#1a1c1c",
+                "primary-fixed-dim": "#ffb59b",
+                "on-secondary-fixed-variant": "#624000",
+                "tertiary-container": "#757474",
+                "on-tertiary-fixed": "#1b1c1c",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#e8e8e8",
+                "on-error-container": "#93000a",
+                "inverse-on-surface": "#f1f1f1",
+                "on-primary-fixed": "#380d00",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#6a4500",
+                "on-surface-variant": "#5b4137",
+                "on-background": "#1a1c1c",
+                "secondary": "#815500",
+                "inverse-surface": "#2f3131",
+                "background": "#f9f9f9",
+                "secondary-fixed": "#ffddb2",
+                "primary-container": "#ce4600"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "space-xl": "32px",
+                "gutter": "16px",
+                "space-lg": "24px",
+                "container-margin": "20px",
+                "space-md": "16px",
+                "space-xs": "4px",
+                "space-sm": "8px"
+        },
+        "fontFamily": {
+                "label-lg": [
+                        "Inter"
+                ],
+                "button": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "button": [
+                        "16px",
+                        {
+                                "lineHeight": "1",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background h-full font-body-md text-on-background m-0 p-0 overflow-hidden relative">
+<!-- Top App Bar (Suppressed on this screen as it's a focused tracking view, but adding a simplified close/help header) -->
+<header class="absolute top-0 left-0 w-full z-50 p-container-margin flex justify-between items-center pointer-events-none">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-center text-on-background pointer-events-auto">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<button class="h-10 px-4 rounded-full bg-white/90 backdrop-blur-md shadow-sm flex items-center justify-center gap-2 text-primary pointer-events-auto">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+<span class="font-button">Ajuda</span>
+</button>
+</header>
+<!-- Map Background Area -->
+<div class="absolute inset-0 z-0 h-[60%]">
+<img alt="Map view showing the delivery route." class="w-full h-full object-cover" data-alt="A stylized, modern digital map view depicting a delivery route in a bustling city. The map uses a light, clean aesthetic with soft grays and warm off-whites, punctuated by a bright orange delivery path line. A small 3D icon of a scooter represents the driver on the route. The lighting suggests daytime with a bright, optimistic mood, fitting for a modern food delivery application." data-location="São Paulo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcfDTKg3eJRZEy0SFCptOZZT72Bw4I_AG8j_ziiztUE6aLM26iz_3Z5UenIldhRggOQpJxBJEWe3TyI27h9r9Vp0gsyVp6Izxj_dn4uuerfIWfOFZ3ZqUGMI6vHVoYvDrdXRvdg18ExpFx1QK0acSGV-RjY2JXUWdKft3pzx6msOPm0Miuda_pyVT5mBrxsyiy3qjJNwCeoYmB1djjbzTOmLllnH7VKw2QQggD4nXiEKuLxUELH99InQQ9o4PdWG-Cxakgzmdv1y8"/>
+<!-- Fake Map Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-background"></div>
+<!-- Driver Marker (Fake) -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center relative z-10 border-2 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="two_wheeler">two_wheeler</span>
+</div>
+<div class="w-4 h-4 bg-primary rounded-full blur-[4px] mt-1 opacity-50 relative -top-3"></div>
+</div>
+</div>
+<!-- Bottom Sheet (Tracking Details) -->
+<div class="absolute bottom-0 left-0 w-full z-10 bg-surface rounded-t-[32px] shadow-[0_-8px_30px_rgba(0,0,0,0.1)] flex flex-col h-[55%] max-h-[600px] transition-transform duration-300">
+<!-- Handle -->
+<div class="w-full flex justify-center py-4">
+<div class="w-12 h-1.5 bg-outline-variant rounded-full"></div>
+</div>
+<div class="flex-1 overflow-y-auto px-container-margin pb-[48px]">
+<!-- Delivery Status Header -->
+<div class="text-center mb-space-lg">
+<h2 class="font-headline-md text-on-surface mb-1">Chegando em 15 min</h2>
+<p class="font-body-md text-on-surface-variant">Previsão: 20:15 - 20:25</p>
+</div>
+<!-- Restaurant Info Card -->
+<div class="bg-white rounded-xl p-space-md shadow-sm flex items-center gap-space-md mb-space-xl border border-surface-container">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Burger place logo" class="w-full h-full object-cover" data-alt="A stylized, appetizing close-up of a premium gourmet burger with melting cheese, crisp lettuce, and a shiny brioche bun. The lighting is warm and inviting, highlighting the textures of the food. The image is cropped tightly to serve as a high-quality restaurant avatar or logo representation in a modern food delivery app, utilizing bright, warm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAywhr7mZqGe7xGpRZFxImjXX8Wdtmw8pVP-BsP_md1yKo5dFYWIVui_a78ZyY9fmg_PkcIRA8Jk115UeFh4CXVYOSr5BWifUdfWP9i1sSsqoYyRt2mBOqvuo5e3_nsi34adF1HBJFr8aE2jDWafGQHVEVIXNEK2Ffpxu6f8VHJGoWNMZDaATbcbXaAD2yUS-qwHWg5sAP4oIzyBwJTQ_7KA9_KLL7kBkTa9lit_tY9cr5EfgFsaL4HAISaI82tDvffw6XD8Xy-x9U"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-body-lg font-bold text-on-surface truncate">Burger Joint Master</h3>
+<p class="font-body-md text-on-surface-variant truncate">Pedido #4092</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="call">call</span>
+</button>
+</div>
+<!-- Timeline -->
+<div class="relative pl-space-sm">
+<!-- Vertical Line -->
+<div class="absolute left-[19px] top-6 bottom-6 w-[2px] bg-surface-variant z-0"></div>
+<!-- Step 1: Confirmado (Completed) -->
+<div class="flex gap-space-md mb-space-lg relative z-10">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+</div>
+<div>
+<h4 class="font-body-lg text-on-surface">Pedido Confirmado</h4>
+<p class="font-body-md text-on-surface-variant">19:45</p>
+</div>
+</div>
+<!-- Step 2: Em preparo (Completed) -->
+<div class="flex gap-space-md mb-space-lg relative z-10">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+</div>
+<div>
+<h4 class="font-body-lg text-on-surface">Em preparo</h4>
+<p class="font-body-md text-on-surface-variant">19:50</p>
+</div>
+</div>
+<!-- Step 3: Em entrega (Active) -->
+<div class="flex gap-space-md mb-space-lg relative z-10">
+<!-- Active line overlay to this point -->
+<div class="absolute left-[11px] top-[-30px] bottom-6 w-[2px] bg-primary z-[-1]"></div>
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 mt-1 shadow-[0_0_0_4px_rgba(165,55,0,0.2)]">
+<span class="material-symbols-outlined text-[14px]" data-icon="two_wheeler">two_wheeler</span>
+</div>
+<div>
+<h4 class="font-body-lg font-bold text-on-surface">Em entrega</h4>
+<p class="font-body-md text-primary">Carlos está a caminho</p>
+</div>
+</div>
+<!-- Step 4: Entregue (Pending) -->
+<div class="flex gap-space-md relative z-10 opacity-50">
+<div class="w-6 h-6 rounded-full bg-surface-variant border-2 border-white flex items-center justify-center flex-shrink-0 mt-1">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+</div>
+<div>
+<h4 class="font-body-lg text-on-surface-variant">Entregue</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
